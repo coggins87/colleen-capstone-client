@@ -17,7 +17,7 @@ render(){
   <header className="App_Header">
     <Header />
   </header>
-  <Route path='/' component={LandingPage} />
+  <Route exact path='/' component={LandingPage} />
   <Route path='/search' component={ExerciseSearch}/> 
   <Route path='/login' component={LoginPage} /> 
   <Route path='/register' component={RegisterPage} /> 
