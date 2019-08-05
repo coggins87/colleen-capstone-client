@@ -1,6 +1,7 @@
 import React from 'react'
 import CheckBoxBody from '../FormHelpers/CheckBoxBody'
 import CheckBoxEquip from '../FormHelpers/CheckBoxEquip'
+import Result from '../../components/Results/results'
 
 class SearchForm extends React.Component {
   constructor(props){
@@ -22,7 +23,8 @@ class SearchForm extends React.Component {
       {id: 10, value: "pullup-bar", isChecked: false},
       {id: 11, value: "medicine-ball", isChecked: false},
       {id: 12, value: "stationary-bike", isChecked: false},
-      {id: 13, value: "bands", isChecked: false}]
+      {id: 13, value: "bands", isChecked: false}],
+      result: null,
     }
   }
   
@@ -52,7 +54,10 @@ class SearchForm extends React.Component {
       equipment: newEquipment
     })
   }
-
+  setResult = result => {
+    this.setState({result: result[0]})
+    
+  }
 
   handleSubmit = e => {
     e.preventDefault()
@@ -62,14 +67,20 @@ class SearchForm extends React.Component {
       parts.push(item.value)
     });
     
-    console.log(parts)
-    console.log(this.state.time)
+    
+    
     let equipment=[]
     let equipObj = this.state.equipment.filter(equip => equip.isChecked);
     equipObj.forEach(item => {
       equipment.push(item.value)
     });
-    console.log(equipment)
+    
+    let result =  [{id: 1,
+      time: 20,
+      movements:[{id: 1, name:'burpees', reps:'10'},{ id: 2, name:'run', reps: '1 mile'}, {id: 3, name:'overhead squats', reps: '15'}]
+      }]
+    
+    this.setResult(result)
   }
   render(){
     return(
@@ -101,6 +112,8 @@ class SearchForm extends React.Component {
         </fieldset>
         <button>Make My Workout</button>
       </form>
+
+      <Result result={this.state.result} />
       </>
     )
   }
