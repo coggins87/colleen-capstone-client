@@ -76,11 +76,10 @@ class SearchForm extends React.Component {
       <>
 
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="time">Select Your Workout Time (minutes)</label>
-        <input id="time" type='number' min='5' max='60' onChange={this.updateTime}></input>
+        <label htmlFor="time">Select Your Workout Time Between 5 and 60 Minutes(required):</label>
+        <input id="time" type='number' min='5' max='60' onChange={this.updateTime} required></input>
         <fieldset>
         <legend htmlFor="body_parts">Select Up to 5 Body Parts to Target (optional):</legend>
-        <input type="checkbox" />
         <ul>
         {
           this.state.body_parts.map((part) => {
@@ -92,7 +91,6 @@ class SearchForm extends React.Component {
       </fieldset>
       <fieldset>
         <legend>Select Equipment (optional):</legend>
-        <input type="checkbox" />
         <ul>
         {
           this.state.equipment.map((equipment) => {

@@ -47,8 +47,9 @@ class Header extends React.Component {
     </Link>
     </h1>
     <span className='Header__tagline--wide'>Find your next workout!</span>
-    {TokenService.hasAuthToken() ? this.renderLoginLink() :
-    this.renderLogoutLink()}
+    {TokenService.hasAuthToken() ? this.renderLogoutLink() :
+    this.renderLoginLink()}
+    <Link to='/search'>Generate A Workout</Link>
   </nav>
   )
   }

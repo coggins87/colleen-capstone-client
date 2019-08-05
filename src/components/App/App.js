@@ -74,9 +74,10 @@ render(){
   <Route path='/search' component={ExerciseSearch}/> 
   <PublicOnlyRoute path='/login' component={LoginPage} /> 
   <PublicOnlyRoute path='/register' component={RegisterPage} /> 
-  <PrivateRoute path='/user/:userId' component={UserMainPage} /> 
+  <Route path='/user/1' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>
   </Switch>
+
   </main>
 </div>
   )
