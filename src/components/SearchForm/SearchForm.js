@@ -38,7 +38,7 @@ class SearchForm extends React.Component {
       part.isChecked = event.target.checked
     })
     this.setState({
-      equipment: newParts
+      body_parts: newParts
     })
   }
 
@@ -52,6 +52,8 @@ class SearchForm extends React.Component {
       equipment: newEquipment
     })
   }
+
+
   handleSubmit = e => {
     e.preventDefault()
     let parts=[]
@@ -77,7 +79,7 @@ class SearchForm extends React.Component {
         <label htmlFor="time">Select Your Workout Time (minutes)</label>
         <input id="time" type='number' min='5' max='60' onChange={this.updateTime}></input>
         <fieldset>
-        <legend htmlFor="body_parts">Select Up to 5 Body Parts to Target</legend>
+        <legend htmlFor="body_parts">Select Up to 5 Body Parts to Target (optional):</legend>
         <input type="checkbox" />
         <ul>
         {
