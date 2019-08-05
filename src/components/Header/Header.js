@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TokenService from '../../services/token-service'
+import IdleService from '../../services/idle-service'
 
 class Header extends React.Component {
   handleLogoutClick = () => {
     console.log('logout')
-   // TokenService.clearAuthToken()
-   // TokenService.clearCallbackBeforeExpiry()
-   // IdleService.unRegisterIdleResets()
+   TokenService.clearAuthToken()
+   TokenService.clearCallbackBeforeExpiry()
+   IdleService.unRegisterIdleResets()
   }
 
   renderLogoutLink() {
@@ -45,8 +47,8 @@ class Header extends React.Component {
     </Link>
     </h1>
     <span className='Header__tagline--wide'>Find your next workout!</span>
-    {this.renderLoginLink()}
-    {this.renderLogoutLink()}
+    {TokenService.hasAuthToken() ? this.renderLoginLink() :
+    this.renderLogoutLink()}
   </nav>
   )
   }

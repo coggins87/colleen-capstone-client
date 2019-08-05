@@ -2,14 +2,24 @@ import React from 'react';
 import LoginForm from '../../components/LoginForm/LoginForm'
 
 class LoginPage extends React.Component{
-
-  handleLogin = e => {
-    e.preventDefault()
+  static defaultProps = {
+    location: {},
+    history: {
+      push: ()=>{}
+    }
+  }
+  handleLoginSuccess = () => {
     console.log('login')
+    const { location, history } = this.props
+    const destination = (location.state || {}.from || '/')
+    history.push(destination)
   }
   render(){
     return(
-      <LoginForm />
+      <section className="LoginPage">
+        <h2>Login</h2>
+      <LoginForm onLoginSuccess={this.handleLoginSuccess}/>
+      </section>
     )
   }
 }
