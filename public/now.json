@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "name": "amrap-app",
+  "alias":"colleen-amrap-app",
+  "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+  ]
+}
