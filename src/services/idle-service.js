@@ -24,6 +24,7 @@ const IdleService = {
       document.addEventListener(event, IdleService.resetIdleTimer, true)
     )},
   unRegisterIdleResets(){
+    
     //remove queud callbacks and events that will queue callbacks
     clearTimeout(_timeoutId)
     _notIdleEvents.forEach(event =>

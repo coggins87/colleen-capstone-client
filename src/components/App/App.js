@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import ExerciseSearch from '../../routes/ExerciseSearch/ExerciseSearch'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import UserMainPage from '../../routes/UserMainPage/UserMainPage'
@@ -74,10 +74,9 @@ render(){
   <Route path='/search' component={ExerciseSearch}/> 
   <PublicOnlyRoute path='/login' component={LoginPage} /> 
   <PublicOnlyRoute path='/register' component={RegisterPage} /> 
-  <Route path='/user/1' component={UserMainPage} /> 
+  <PrivateRoute path='/user/:userId' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>
   </Switch>
-
   </main>
 </div>
   )

@@ -5,7 +5,6 @@ import IdleService from '../../services/idle-service'
 
 class Header extends React.Component {
   handleLogoutClick = () => {
-    console.log('logout')
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
@@ -37,8 +36,19 @@ class Header extends React.Component {
       </div>
     )
   }
+
+  renderUserPageLink() {
+    return (
+      <div className='Header__logged-in'>
+        <Link
+        to='/user/:userId'>
+          My Workouts
+        </Link>
+      </div>
+    )
+  }
+
   render(){
-    
     return(
   <nav>
     <h1>
@@ -47,8 +57,10 @@ class Header extends React.Component {
     </Link>
     </h1>
     <span className='Header__tagline--wide'>Find your next workout!</span>
+    
     {TokenService.hasAuthToken() ? this.renderLogoutLink() :
     this.renderLoginLink()}
+    {TokenService.hasAuthToken() ? this.renderUserPageLink() : <></>}
     <Link to='/search'>Generate A Workout</Link>
   </nav>
   )

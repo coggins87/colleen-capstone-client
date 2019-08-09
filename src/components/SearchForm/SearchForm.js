@@ -1,39 +1,34 @@
 import React from 'react'
-import CheckBoxBody from '../FormHelpers/CheckBoxBody'
+//import CheckBoxBody from '../FormHelpers/CheckBoxBody'
 import CheckBoxEquip from '../FormHelpers/CheckBoxEquip'
 import Result from '../../components/Results/results'
-
+import WorkoutSearchService from '../../services/workout-search-service'
 class SearchForm extends React.Component {
   constructor(props){
     super(props)
     this.state = {
       error: null,
       time: 0,
-      body_parts: [
-      {id:1, value:"legs", isChecked: false},
-      {id:2, value:"back", isChecked: false},
-      {id:3, value:"arms", isChecked: false},
-      {id:4, value:"shoulders", isChecked: false},
-      {id:5, value:"full-body", isChecked: false},
-      {id:6, value:"abs", isChecked: false}],
       equipment:[
-      {id: 7, value: "dumbells", isChecked: false},
+      {id: 7, value: "dumbell", isChecked: false},
       {id: 8, value: "barbell", isChecked: false},
       {id: 9, value: "treadmill", isChecked: false},
       {id: 10, value: "pullup-bar", isChecked: false},
       {id: 11, value: "medicine-ball", isChecked: false},
       {id: 12, value: "stationary-bike", isChecked: false},
       {id: 13, value: "bands", isChecked: false}],
-      result: null,
+      result: [],
     }
   }
   
   updateTime = e => {
+    console.log(' SET STATE ')
+
     this.setState({
       time: e.target.value
     })
   }
-  updateBodyParts = event => {
+/*   updateBodyParts = event => {
     let newParts = this.state.body_parts
     newParts.forEach(part => {
       if(part.value === event.target.value)
@@ -43,53 +38,51 @@ class SearchForm extends React.Component {
       body_parts: newParts
     })
   }
-
+ */
   updateEquipment = event => {
     let newEquipment = this.state.equipment
     newEquipment.forEach(equipment => {
       if(equipment.value === event.target.value)
       equipment.isChecked = event.target.checked
     })
+    console.log(' SET STATE ')
+
     this.setState({
+      
       equipment: newEquipment
     })
-  }
-  setResult = result => {
-    this.setState({result: result[0]})
-    
   }
 
   handleSubmit = e => {
     e.preventDefault()
-    let parts=[]
+   /*  let parts=[]
     let bodyParts = this.state.body_parts.filter(part => part.isChecked);
     bodyParts.forEach(item => {
       parts.push(item.value)
-    });
+    }); */
     
-    
-    
+    let time = this.state.time
     let equipment=[]
     let equipObj = this.state.equipment.filter(equip => equip.isChecked);
     equipObj.forEach(item => {
       equipment.push(item.value)
     });
-    
-    let result =  [{id: 1,
-      time: 20,
-      movements:[{id: 1, name:'burpees', reps:'10'},{ id: 2, name:'run', reps: '1 mile'}, {id: 3, name:'overhead squats', reps: '15'}]
-      }]
-    
-    this.setResult(result)
+    let equipmentString = equipment.join(" ")
+
+    WorkoutSearchService.submitSearch(time, equipmentString)
+    .then(res=> {
+      console.log('RESULTS SET STATE')
+      this.setState({result: res})
+      })
+  
   }
   render(){
-    return(
-      <>
-
+    
+    return (    <>
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="time">Select Your Workout Time Between 5 and 60 Minutes(required):</label>
         <input id="time" type='number' min='5' max='60' onChange={this.updateTime} required></input>
-        <fieldset>
+       {/*  <fieldset>
         <legend htmlFor="body_parts">Select Up to 5 Body Parts to Target (optional):</legend>
         <ul>
         {
@@ -99,7 +92,7 @@ class SearchForm extends React.Component {
         }
         </ul>
 
-      </fieldset>
+      </fieldset> */}
       <fieldset>
         <legend>Select Equipment (optional):</legend>
         <ul>
@@ -112,11 +105,13 @@ class SearchForm extends React.Component {
         </fieldset>
         <button>Make My Workout</button>
       </form>
+      {this.state.result.length > 0 ?  <Result result={this.state.result} time={this.state.time} /> : null}
 
-      <Result result={this.state.result} />
       </>
+
     )
   }
 }
+
 
 export default SearchForm

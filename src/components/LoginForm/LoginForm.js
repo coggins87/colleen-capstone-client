@@ -8,7 +8,7 @@ class LoginForm extends React.Component{
   state = {error: null}
 
   handleSubmitJwtAuth = e => {
-    e.PreventDefault()
+    e.preventDefault()
     this.setState({error: null})
     const {user_name, password} = e.target
 
@@ -34,8 +34,8 @@ class LoginForm extends React.Component{
       <label htmlFor='Login_user_name'>User Name:</label>
       <input required type='text' name='user_name' id='Login_user_name'></input>
       <label htmlFor='Login_password'>Password:</label>
-      <input required type='text' name='password' id='Login_password'></input>
-      <button>Log In</button>
+      <input required type='password' name='password' id='Login_password'></input>
+      <button type='submit'>Log In</button>
       </form>
 
     )

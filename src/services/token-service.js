@@ -45,6 +45,7 @@ const TokenService = {
     _timeoutId = setTimeout(callback, msUntilExpiry - _TEN_SECONDS_IN_MS)
   },
   clearCallbackBeforeExpiry(){
+    console.log('clearcallbackbeforeexpiry')
     clearTimeout(_timeoutId)
   },
 }

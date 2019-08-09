@@ -8,16 +8,18 @@ class RegisterForm extends React.Component {
   state = { error: null}
   handleSubmit = e => {
     e.preventDefault()
-    const { user_name, password } = e.target
+    const { user_name, password, email } = e.target
 
     this.setState({error: null})
     AuthApiService.postUser({
       user_name: user_name.value,
-      password: password.value
+      password: password.value,
+      email: email.value
     })
     .then(user => {
       user_name.value = ''
       password.value = ''
+      email.value=''
       this.props.onRegistrationSuccess()
     })
     .catch(res => {
@@ -34,7 +36,9 @@ class RegisterForm extends React.Component {
         <label htmlFor='Registration_user_name'>User Name:</label>
         <input required type='text' name='user_name' id='Registration_user_name'></input>
         <label htmlFor='Registration_password'>Password:</label>
-        <input required type='text' name='password' id='Registration_password'></input>
+        <input required type='password' name='password' id='Registration_password'></input>
+        <label htmlFor='Registration_email'>Email:</label>
+        <input required type='text' name='email' id='Registration_email'></input>
         <button>Register</button>
       </form>
     )
