@@ -1,9 +1,10 @@
 import React from 'react'
 //import CheckBoxBody from '../FormHelpers/CheckBoxBody'
 import CheckBoxEquip from '../FormHelpers/CheckBoxEquip'
-import Result from '../../components/Results/results'
+import Result from '../Results/results'
 import WorkoutSearchService from '../../services/workout-search-service'
-class SearchForm extends React.Component {
+
+class PrivateSearchForm extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -114,4 +115,4 @@ class SearchForm extends React.Component {
 }
 
 
-export default SearchForm
+export default PrivateSearchForm

@@ -1,7 +1,14 @@
 import React from 'react'
+import TokenService from '../../services/token-service'
 
 class Result extends React.Component{
 
+
+  renderSaveButton = () =>{
+    return (
+      <button onClick={this.props.saveWorkout}>Save Workout</button>
+    )
+  }
   render (){
    
     return (<>
@@ -13,6 +20,7 @@ class Result extends React.Component{
           </li>)
       }): '' }
     </ul>
+    {TokenService.hasAuthToken() ? this.renderSaveButton(): ''}
     </>
     );
      

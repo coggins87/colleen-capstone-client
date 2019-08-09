@@ -8,6 +8,7 @@ class Header extends React.Component {
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
+   this.forceUpdate()
   }
 
   renderLogoutLink() {
@@ -61,7 +62,9 @@ class Header extends React.Component {
     {TokenService.hasAuthToken() ? this.renderLogoutLink() :
     this.renderLoginLink()}
     {TokenService.hasAuthToken() ? this.renderUserPageLink() : <></>}
-    <Link to='/search'>Generate A Workout</Link>
+    {!TokenService.hasAuthToken() ? <Link to='/search'>Generate A Workout</Link> :
+  <Link to='/search/:userId'>Generate A Workout</Link>}
+    
   </nav>
   )
   }

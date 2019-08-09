@@ -6,18 +6,17 @@ import UserMainPage from '../../routes/UserMainPage/UserMainPage'
 import RegisterPage from '../../routes/RegisterPage/RegisterPage'
 import Header from '../Header/Header'
 import LandingPage from '../../routes/LandingPage/LandingPage'
-import ApiContext from '../../context/ApiContext'
+//import ApiContext from '../../context/ApiContext'
 import PrivateRoute from '../../utils/PrivateRoute'
 import PublicOnlyRoute from '../../utils/PublicOnlyRoute'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
-
+import userSearchPage from '../../routes/UserSearchPage/UserSearchPage'
 
 
 class App extends React.Component {
-static contextType = ApiContext;
 state = { hasError: false}
 
 static getDerivedStateFromError(error) {
@@ -25,6 +24,7 @@ static getDerivedStateFromError(error) {
   return { hasError: true }
 }
 componentDidMount (){
+  
   /* set the function(callback)to call when a user goes idle
   we'll set this to logout a user when they're idle */
   IdleService.setIdleCallback(this.logoutFromIdle)
@@ -41,6 +41,7 @@ componentDidMount (){
       AuthApiService.postRefreshToken()
     })
   }
+  
 }
 componentWillUnmount(){
   /* when the app unmounts, stop the event listeners that auto
@@ -69,14 +70,18 @@ render(){
     <Header />
   </header>
   <main className="App_main">
+  {this.state.hasError && <p className='red'>There was an error! Oh no!</p>}
+
     <Switch>
   <Route exact path='/' component={LandingPage} />
-  <Route path='/search' component={ExerciseSearch}/> 
+  <PublicOnlyRoute path='/search' component={ExerciseSearch}/> 
+  <PrivateRoute path='search/:userId' component={userSearchPage} />
   <PublicOnlyRoute path='/login' component={LoginPage} /> 
   <PublicOnlyRoute path='/register' component={RegisterPage} /> 
   <PrivateRoute path='/user/:userId' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>
   </Switch>
+  
   </main>
 </div>
   )

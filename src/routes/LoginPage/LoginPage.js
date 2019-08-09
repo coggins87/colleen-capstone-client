@@ -6,19 +6,21 @@ class LoginPage extends React.Component{
     location: {},
     history: {
       push: ()=>{}
-    }
+    },
+    
   }
+ 
   handleLoginSuccess = () => {
-    console.log('login')
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/'
     history.push(destination)
+  
   }
   render(){
     return(
       <section className="LoginPage">
         <h2>Login</h2>
-      <LoginForm onLoginSuccess={this.handleLoginSuccess}/>
+      <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </section>
     )
   }

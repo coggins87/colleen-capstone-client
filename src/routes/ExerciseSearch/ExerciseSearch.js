@@ -9,7 +9,7 @@ class ExerciseSearch extends React.Component {
     return (
     <>
     <h2>Create a Search to Generate a Random AMRAP</h2>
-    <SearchForm />
+    <SearchForm/>
 
 
     </>
