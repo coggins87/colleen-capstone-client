@@ -1,13 +1,11 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service.js'
-import ApiContext from '../../context/ApiContext.js';
 
 class LoginForm extends React.Component{
   static defaultProps = {
     onLoginSuccess: ()=>{}
   }
 
-  static contextType = ApiContext
   state = {error: null}
 
   handleSubmitJwtAuth = e => {
@@ -20,7 +18,6 @@ class LoginForm extends React.Component{
       password: password.value
     })
     .then(res=> {
-      this.context.userId = res.payload.user_id
       user_name.value=""
       password.value=""
       this.props.onLoginSuccess()

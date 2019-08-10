@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import ExerciseSearch from '../../routes/ExerciseSearch/ExerciseSearch'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import UserMainPage from '../../routes/UserMainPage/UserMainPage'
@@ -12,18 +12,20 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
-import ApiContext from '../../context/ApiContext';
 
 
 class App extends React.Component {
+  
 state = { hasError: false}
-static contextType = ApiContext
+
 
 static getDerivedStateFromError(error) {
   console.error(error)
   return { hasError: true }
 }
+
 componentDidMount (){
+ 
   /* set the function(callback)to call when a user goes idle
   we'll set this to logout a user when they're idle */
   IdleService.setIdleCallback(this.logoutFromIdle)

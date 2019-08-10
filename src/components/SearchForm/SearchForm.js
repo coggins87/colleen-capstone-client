@@ -3,10 +3,13 @@ import React from 'react'
 import CheckBoxEquip from '../FormHelpers/CheckBoxEquip'
 import Result from '../../components/Results/results'
 import WorkoutSearchService from '../../services/workout-search-service'
+import ApiContext from '../../context/ApiContext';
+import TokenService from '../../services/token-service'
+
 class SearchForm extends React.Component {
   constructor(props){
     super(props)
-    
+
     this.state = {
       error: null,
       time: 0,
@@ -21,7 +24,7 @@ class SearchForm extends React.Component {
       result: [],
     }
   }
-  
+  static contextType = ApiContext
   updateTime = e => {
     console.log(' SET STATE ')
 
@@ -56,10 +59,14 @@ class SearchForm extends React.Component {
 
   saveWorkout = e => {
     e.preventDefault()
-    let time = this.state.time
-    console.log(time)
-    let userId = this.props.req.params.userId
-    console.log(userId)
+    let workout_length = this.state.time
+
+    let token = TokenService.readJwtToken()
+    let user_id = token.user_id
+    let movements = this.state.result
+    let workoutToSave = {user_id, workout_length, movements }
+   WorkoutSearchService.saveWorkout(user_id, workoutToSave)
+
   }
 
   handleSubmit = e => {

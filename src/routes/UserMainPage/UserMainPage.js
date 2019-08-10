@@ -1,7 +1,6 @@
 import React from "react";
 import WorkoutList from "../../components/WorkoutList/workout-list";
 import WorkoutSearchService from "../../services/workout-search-service";
-import ApiContext from "../../context/ApiContext";
 
 class UserMainPage extends React.Component {
   state = {
@@ -11,7 +10,6 @@ class UserMainPage extends React.Component {
     match: { params: {} }
   };
 
-  contextType = ApiContext
   componentDidMount() {
     console.log('user', this.props)
     const userId = this.props.match.params.userId;

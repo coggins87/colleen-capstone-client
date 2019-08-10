@@ -5,13 +5,21 @@ import IdleService from '../../services/idle-service'
 import ApiContext from '../../context/ApiContext';
 
 class Header extends React.Component {
+
+  state = {
+    workouts: []
+  };
+  static defaultProps = {
+    match: { params: {} }
+  };
+
   static contextType = ApiContext
 
   handleLogoutClick = () => {
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
-   this.context.isLoggedIn = false
+    this.context.isLoggedIn = false
    this.forceUpdate()
   }
 
@@ -46,7 +54,7 @@ class Header extends React.Component {
     return (
       <div className='Header__logged-in'>
         <Link
-        to='/user/:userId'>
+        to='/users/:userId'>
           My Workouts
         </Link>
       </div>

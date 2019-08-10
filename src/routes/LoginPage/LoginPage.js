@@ -11,13 +11,13 @@ class LoginPage extends React.Component{
     
   }
  static contextType = ApiContext
-  handleLoginSuccess = () => {
-    this.context.isLoggedIn = true
-    const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
-    history.push(destination)
-  
-  }
+ handleLoginSuccess = () => {
+  this.context.isLoggedIn = true
+   const { location, history } = this.props
+   const destination = (location.state || {}).from || '/'
+   history.push(destination)
+ 
+ }
   render(){
     return(
       <section className="LoginPage">
