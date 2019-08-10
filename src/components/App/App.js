@@ -6,25 +6,24 @@ import UserMainPage from '../../routes/UserMainPage/UserMainPage'
 import RegisterPage from '../../routes/RegisterPage/RegisterPage'
 import Header from '../Header/Header'
 import LandingPage from '../../routes/LandingPage/LandingPage'
-//import ApiContext from '../../context/ApiContext'
 import PrivateRoute from '../../utils/PrivateRoute'
 import PublicOnlyRoute from '../../utils/PublicOnlyRoute'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
-import userSearchPage from '../../routes/UserSearchPage/UserSearchPage'
+import ApiContext from '../../context/ApiContext';
 
 
 class App extends React.Component {
 state = { hasError: false}
+static contextType = ApiContext
 
 static getDerivedStateFromError(error) {
   console.error(error)
   return { hasError: true }
 }
 componentDidMount (){
-  
   /* set the function(callback)to call when a user goes idle
   we'll set this to logout a user when they're idle */
   IdleService.setIdleCallback(this.logoutFromIdle)
@@ -74,11 +73,10 @@ render(){
 
     <Switch>
   <Route exact path='/' component={LandingPage} />
-  <PublicOnlyRoute path='/search' component={ExerciseSearch}/> 
-  <PrivateRoute path='search/:userId' component={userSearchPage} />
+  <Route path='/search' component={ExerciseSearch}/> 
   <PublicOnlyRoute path='/login' component={LoginPage} /> 
   <PublicOnlyRoute path='/register' component={RegisterPage} /> 
-  <PrivateRoute path='/user/:userId' component={UserMainPage} /> 
+  <PrivateRoute path='/users/:userId' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>
   </Switch>
   

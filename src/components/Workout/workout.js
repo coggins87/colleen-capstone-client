@@ -1,14 +1,19 @@
-import React from 'react'
+import React from "react";
 
-export default class Workout extends React.Component{
-render(){
-  return (
-    <ul>
-      <h3>In {this.props.prop.time} minutes complete:</h3>
-      {this.props.prop.movements.map(movement=> {
-        return (<li>{movement.reps} {movement.name} </li>)
-      })}
-    </ul>
-
-  )}
+export default class Workout extends React.Component {
+  render() {
+    return (
+      <ul>
+        <h3>In {this.props.workout.workout_length} minutes complete:</h3>
+        {this.props.workout.movements.map(movement => {
+          return (
+            <li key={movement.id}>
+              {movement.reps} {movement.movement_name}{" "}
+              {movement.equipment ? `with ${movement.equipment}` : ""}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
 }

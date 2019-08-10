@@ -2,12 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
+import ApiContext from '../../context/ApiContext';
 
 class Header extends React.Component {
+  static contextType = ApiContext
+
   handleLogoutClick = () => {
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
+   this.context.isLoggedIn = false
    this.forceUpdate()
   }
 
@@ -59,11 +63,10 @@ class Header extends React.Component {
     </h1>
     <span className='Header__tagline--wide'>Find your next workout!</span>
     
-    {TokenService.hasAuthToken() ? this.renderLogoutLink() :
+    {TokenService.hasAuthToken()|| this.context.isLoggedIn ? this.renderLogoutLink() :
     this.renderLoginLink()}
-    {TokenService.hasAuthToken() ? this.renderUserPageLink() : <></>}
-    {!TokenService.hasAuthToken() ? <Link to='/search'>Generate A Workout</Link> :
-  <Link to='/search/:userId'>Generate A Workout</Link>}
+    {TokenService.hasAuthToken() || this.context.isLoggedIn ? this.renderUserPageLink() : <></>}
+    <Link to='/search'>Generate A Workout</Link> 
     
   </nav>
   )

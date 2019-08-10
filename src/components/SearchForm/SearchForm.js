@@ -6,6 +6,7 @@ import WorkoutSearchService from '../../services/workout-search-service'
 class SearchForm extends React.Component {
   constructor(props){
     super(props)
+    
     this.state = {
       error: null,
       time: 0,
@@ -51,6 +52,14 @@ class SearchForm extends React.Component {
       
       equipment: newEquipment
     })
+  }
+
+  saveWorkout = e => {
+    e.preventDefault()
+    let time = this.state.time
+    console.log(time)
+    let userId = this.props.req.params.userId
+    console.log(userId)
   }
 
   handleSubmit = e => {
@@ -105,7 +114,7 @@ class SearchForm extends React.Component {
         </fieldset>
         <button>Make My Workout</button>
       </form>
-      {this.state.result.length > 0 ?  <Result result={this.state.result} time={this.state.time} saveWorkout={this.props.saveWorkout} /> : null}
+      {this.state.result.length > 0 ?  <Result result={this.state.result} time={this.state.time} saveWorkout={this.saveWorkout} /> : null}
 
       </>
 
