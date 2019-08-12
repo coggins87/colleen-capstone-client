@@ -1,49 +1,76 @@
-import React from 'react'
+import React from "react";
+import TokenService from "../services/token-service";
+import AuthApiService from "../services/auth-api-service";
 
 const ApiContext = React.createContext({
   error: null,
   isLoggedIn: false,
   userId: null,
-  setError: ()=>{},
-  clearError: ()=>{},
-  handleLoginSuccess: ()=>{}
-})
+  setError: () => {},
+  clearError: () => {},
+  handleLoginSuccess: () => {}
+});
 
-export default ApiContext
+export default ApiContext;
 
 export class ApiProvider extends React.Component {
   state = {
     error: null,
     isLoggedIn: false,
-    userId: null,
+    userId: null
   };
   setError = error => {
-    console.error(error)
-    this.setState({ error })
+    console.error(error);
+    this.setState({ error });
+  };
+  clearError = () => {
+    this.setState({ error: null });
+  };
 
+  handleLoginSuccess = () => {
+    
+    const read = TokenService.readJwtToken();
+    const user_Id = read.user_id;
+    this.setState({
+      userId: user_Id,
+      isLoggedIn: true
+    });
+   
+  };
+
+  handleLogoutSuccess = () => {
+    this.setState({
+      userId : null,
+      isLoggedIn: false
+    })
   }
-  clearError = ()=>{
-    this.setState({error: null})
+
+  isUserLoggedIn =()=>{
+    console.log('USER LOGGEDIN?', this.state.userId)
+    if(TokenService.hasAuthToken()){
+      const read = TokenService.readJwtToken();
+      const user_Id = read.user_id;
+      this.setState({
+        userId: user_Id
+      });
+    }
   }
-  handleLoginSuccess = () =>{
-    const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
-    history.push(destination)
-  }
-  render(){
+  render() {
+    console.log('CONTEXT', this.state.userId)
     const value = {
+      isUserLoggedIn: this.isUserLoggedIn,
       error: this.state.error,
       isLoggedIn: this.state.isLoggedIn,
       setError: this.setError,
       clearError: this.clearError,
       userId: this.state.userId,
-      handleLoginSuccess: this.state.handleLoginSuccess,
-    }
-    return(
+      handleLoginSuccess: this.handleLoginSuccess,
+      handleLogoutSuccess: this.handleLogoutSuccess,
+    };
+    return (
       <ApiContext.Provider value={value}>
         {this.props.children}
       </ApiContext.Provider>
-    )
+    );
   }
 }
-

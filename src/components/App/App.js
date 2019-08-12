@@ -12,20 +12,28 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
-
+import ApiContext from '../../context/ApiContext';
 
 class App extends React.Component {
   
-state = { hasError: false}
-
+  static contextType = ApiContext
+  state = {
+    hasError: false,
+    userId: this.context.userId
+  }
 
 static getDerivedStateFromError(error) {
   console.error(error)
   return { hasError: true }
 }
 
+
 componentDidMount (){
- 
+  this.context.isUserLoggedIn()
+  console.log('APP context', this.context)
+console.log('APP state', this.state)
+  console.log('APP LOGIN')
+
   /* set the function(callback)to call when a user goes idle
   we'll set this to logout a user when they're idle */
   IdleService.setIdleCallback(this.logoutFromIdle)
@@ -42,7 +50,6 @@ componentDidMount (){
       AuthApiService.postRefreshToken()
     })
   }
-  
 }
 componentWillUnmount(){
   /* when the app unmounts, stop the event listeners that auto
@@ -76,7 +83,7 @@ render(){
     <Switch>
   <Route exact path='/' component={LandingPage} />
   <Route path='/search' component={ExerciseSearch}/> 
-  <PublicOnlyRoute path='/login' component={LoginPage} /> 
+  <PublicOnlyRoute path='/users/login' component={LoginPage} /> 
   <PublicOnlyRoute path='/register' component={RegisterPage} /> 
   <PrivateRoute path='/users/:userId' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>

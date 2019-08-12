@@ -11,7 +11,6 @@ class UserMainPage extends React.Component {
   };
 
   componentDidMount() {
-    console.log('user', this.props)
     const userId = this.props.match.params.userId;
     WorkoutSearchService.getUserWorkouts(userId).then(res =>
       this.setState({

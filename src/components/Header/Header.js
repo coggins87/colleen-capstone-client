@@ -5,22 +5,22 @@ import IdleService from '../../services/idle-service'
 import ApiContext from '../../context/ApiContext';
 
 class Header extends React.Component {
-
-  state = {
-    workouts: []
-  };
   static defaultProps = {
-    match: { params: {} }
-  };
-
+    location: {},
+    history: {
+      push: ()=>{}
+    },
+    
+  }
   static contextType = ApiContext
 
   handleLogoutClick = () => {
+//    this.context.isLoggedIn = false
+   
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
-    this.context.isLoggedIn = false
-   this.forceUpdate()
+   this.context.handleLogoutSuccess()
   }
 
   renderLogoutLink() {
@@ -39,7 +39,7 @@ class Header extends React.Component {
     return (
       <div className='Header__not-logged-in'>
         <Link
-          to='/login'>
+          to='/users/login'>
           Log in
         </Link>
         <Link
@@ -51,17 +51,37 @@ class Header extends React.Component {
   }
 
   renderUserPageLink() {
+  
     return (
       <div className='Header__logged-in'>
         <Link
-        to='/users/:userId'>
+        to={`/users/${this.context.userId}`}>
           My Workouts
         </Link>
       </div>
     )
   }
+/* 
+  componentWillMount(){
+    
+    if(TokenService.hasAuthToken()){
+      //this.context.isLoggedIn = true
+      this.setState({
+        isLoggedIn : this.context.isLoggedIn
+      })
+    } else {
+      this.setState({
+        isLoggedIn: false
+      })
+    }
+    console.log('HAS TOKEN', this.context.isLoggedIn)
 
+  }
+ */
   render(){
+    console.log(this.context.userId)
+console.log(this.props)
+    //console.log("ON RENDER IS LOGGED IN", this.context.isLoggedIn)
     return(
   <nav>
     <h1>
@@ -71,9 +91,9 @@ class Header extends React.Component {
     </h1>
     <span className='Header__tagline--wide'>Find your next workout!</span>
     
-    {TokenService.hasAuthToken()|| this.context.isLoggedIn ? this.renderLogoutLink() :
+    {TokenService.hasAuthToken() /* || this.context.isLoggedIn  */? this.renderLogoutLink() :
     this.renderLoginLink()}
-    {TokenService.hasAuthToken() || this.context.isLoggedIn ? this.renderUserPageLink() : <></>}
+    {TokenService.hasAuthToken()/*  || this.context.isLoggedIn */ ? this.renderUserPageLink() : <></>}
     <Link to='/search'>Generate A Workout</Link> 
     
   </nav>
