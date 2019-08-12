@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
 import ApiContext from '../../context/ApiContext';
+import ('./header.css')
 
 class Header extends React.Component {
   static defaultProps = {
@@ -14,9 +15,7 @@ class Header extends React.Component {
   }
   static contextType = ApiContext
 
-  handleLogoutClick = () => {
-//    this.context.isLoggedIn = false
-   
+  handleLogoutClick = () => {   
    TokenService.clearAuthToken()
    TokenService.clearCallbackBeforeExpiry()
    IdleService.unRegisterIdleResets()
@@ -38,14 +37,16 @@ class Header extends React.Component {
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-        <Link
+        <Link className="link"
           to='/users/login'>
           Log in
         </Link>
-        <Link
+        <div>
+        <Link className="link"
           to='/register'>
           Register
         </Link>
+        </div>
       </div>
     )
   }
@@ -54,48 +55,31 @@ class Header extends React.Component {
   
     return (
       <div className='Header__logged-in'>
-        <Link
+        <Link className="link"
         to={`/users/${this.context.userId}`}>
           My Workouts
         </Link>
       </div>
     )
   }
-/* 
-  componentWillMount(){
-    
-    if(TokenService.hasAuthToken()){
-      //this.context.isLoggedIn = true
-      this.setState({
-        isLoggedIn : this.context.isLoggedIn
-      })
-    } else {
-      this.setState({
-        isLoggedIn: false
-      })
-    }
-    console.log('HAS TOKEN', this.context.isLoggedIn)
 
-  }
- */
   render(){
-    console.log(this.context.userId)
-console.log(this.props)
-    //console.log("ON RENDER IS LOGGED IN", this.context.isLoggedIn)
     return(
   <nav>
+    <div className='header-div'>
     <h1>
-    <Link to='/'>
+    <Link className="header, link" to='/'>
       AMRApp
     </Link>
     </h1>
-    <span className='Header__tagline--wide'>Find your next workout!</span>
-    
-    {TokenService.hasAuthToken() /* || this.context.isLoggedIn  */? this.renderLogoutLink() :
+    <div className='Header__tagline--wide'><span>Find your next workout!</span></div>
+    </div>
+    <div className='page-links'>
+    {TokenService.hasAuthToken() ? this.renderLogoutLink() :
     this.renderLoginLink()}
-    {TokenService.hasAuthToken()/*  || this.context.isLoggedIn */ ? this.renderUserPageLink() : <></>}
-    <Link to='/search'>Generate A Workout</Link> 
-    
+    {TokenService.hasAuthToken() ? this.renderUserPageLink() : <></>}
+    <Link className="link" to='/search'>Generate A Workout</Link> 
+    </div>
   </nav>
   )
   }

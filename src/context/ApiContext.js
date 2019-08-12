@@ -1,6 +1,5 @@
 import React from "react";
 import TokenService from "../services/token-service";
-import AuthApiService from "../services/auth-api-service";
 
 const ApiContext = React.createContext({
   error: null,

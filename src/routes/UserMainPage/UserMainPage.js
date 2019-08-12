@@ -12,6 +12,7 @@ class UserMainPage extends React.Component {
 
   componentDidMount() {
     const userId = this.props.match.params.userId;
+    
     WorkoutSearchService.getUserWorkouts(userId).then(res =>
       this.setState({
         workouts: res
