@@ -1,0 +1,10 @@
+.ExerciseSearch {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+}
+
+.ExerciseHeader {
+  margin-top: 30%;
+}

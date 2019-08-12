@@ -5,7 +5,7 @@ import Result from '../../components/Results/results'
 import WorkoutSearchService from '../../services/workout-search-service'
 import ApiContext from '../../context/ApiContext';
 import TokenService from '../../services/token-service'
-
+import './SearchForm.css'
 class SearchForm extends React.Component {
   constructor(props){
     super(props)
@@ -26,7 +26,6 @@ class SearchForm extends React.Component {
   }
   static contextType = ApiContext
   updateTime = e => {
-    console.log(' SET STATE ')
 
     this.setState({
       time: e.target.value
@@ -49,10 +48,8 @@ class SearchForm extends React.Component {
       if(equipment.value === event.target.value)
       equipment.isChecked = event.target.checked
     })
-    console.log(' SET STATE ')
-
-    this.setState({
-      
+    
+  this.setState({    
       equipment: newEquipment
     })
   }
@@ -87,7 +84,6 @@ class SearchForm extends React.Component {
 
     WorkoutSearchService.submitSearch(time, equipmentString)
     .then(res=> {
-      console.log('RESULTS SET STATE')
       this.setState({result: res})
       })
   
@@ -111,7 +107,7 @@ class SearchForm extends React.Component {
       </fieldset> */}
       <fieldset>
         <legend>Select Equipment (optional):</legend>
-        <ul>
+        <ul className='check_box_list'>
         {
           this.state.equipment.map((equipment) => {
             return (<CheckBoxEquip handleCheck={this.updateEquipment}  {...equipment} />)

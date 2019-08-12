@@ -13,7 +13,7 @@ import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import ApiContext from '../../context/ApiContext';
-
+import ('./app.css')
 class App extends React.Component {
   
   static contextType = ApiContext

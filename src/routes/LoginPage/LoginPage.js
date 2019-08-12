@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginForm from '../../components/LoginForm/LoginForm'
 import ApiContext from '../../context/ApiContext';
-
+import './LoginPage.css'
 class LoginPage extends React.Component{
   static defaultProps = {
     location: {},

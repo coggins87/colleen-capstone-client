@@ -1,6 +1,6 @@
 import React from 'react'
 import RegisterForm from '../../components/RegisterForm/RegisterForm'
-
+import ('./RegisterPage.css')
 class RegisterPage extends React.Component {
  static defaultProps = {
    history: {
@@ -13,7 +13,7 @@ class RegisterPage extends React.Component {
  }
   render(){
     return(
-      <section>
+      <section className="RegisterPage">
         <h2>Register</h2>
      <RegisterForm 
      onRegistrationSuccess={this.handleRegistrationSuccess}

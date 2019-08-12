@@ -25,7 +25,7 @@ class Header extends React.Component {
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
-        <Link
+        <Link className='link'
           onClick={this.handleLogoutClick}
           to='/'>
           Logout

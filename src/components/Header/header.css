@@ -1,15 +1,20 @@
 nav {
+  position: fixed;
+  z-index: 1;
   background-color: rgba(5, 15, 20);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-between;
-  padding-bottom: 15px;
+/*   align-content: space-between;
+ */  padding-bottom: 10px;
+ align-self: flex-start;
+ width: 100vw
 }
-@media all and (max-width: 500px){
+@media all and (max-width: 510px){
   nav {
     flex-direction: column;
-    align-content: center
+    align-content: center;
+    width: 100%
   }
 h1 {
   text-align: center;
@@ -44,22 +49,21 @@ text-align: center;
   justify-content: flex-end;
   text-align: right;
   margin: auto;
+  padding-top: 25px;
+
 }
 
 h1 > .link {
-  color: rgb(97, 221, 116);
+  color: rgb(220, 228, 222);
   font-size: 1.5rem;
 }
-.link {
+.link  {
   text-decoration: none;
   color: whitesmoke;
-  
 }
+
 .link:hover {
   color: rgb(0, 183, 255);
 }
 .Header__not-logged-in {
-}
-
-.Header__logged-in {
 }
