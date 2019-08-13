@@ -35,7 +35,7 @@ class LoginForm extends React.Component{
     const {error}= this.state
     return (
       <form className="_form" onSubmit={this.handleSubmitJwtAuth}>
-        <div>{error &&<p>{error}</p>}</div>
+        <div className="error">{error &&<p>{error}</p>}</div>
       <label htmlFor='Login_user_name'>User Name:</label>
       <input className="form_input" required type='text' placeholder="Required" name='user_name' id='Login_user_name'></input>
       <label htmlFor='Login_password'>Password:</label>

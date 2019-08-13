@@ -1,6 +1,6 @@
 import React from 'react'
 import TokenService from '../../services/token-service'
-
+import './results.css'
 class Result extends React.Component{
 
 
@@ -11,8 +11,8 @@ class Result extends React.Component{
   }
   render (){
    
-    return (<>
-      <ul>
+    return (<div className="results">
+      <ul className="results_list">
      <h3>In {this.props.time ? this.props.time : ''} minutes complete:</h3>
       {this.props.result.length > 0 ? this.props.result.map(movement=> {
         return (<li key={movement.id}>
@@ -21,7 +21,7 @@ class Result extends React.Component{
       }): '' }
     </ul>
     {TokenService.hasAuthToken() ? this.renderSaveButton(): ''}
-    </>
+    </div>
     );
      
   }

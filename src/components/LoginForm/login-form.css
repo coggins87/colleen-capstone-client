@@ -5,6 +5,8 @@
   font-size: 1.2em;
 }
 
+
+
 .form_input {
   padding: 7px;
   font-size: 100%;
@@ -32,4 +34,8 @@
 .form_input::placeholder{
   color: rgb(240, 18, 18);
   font-size: 75%;
+}
+
+.error {
+  font-size: 2em;
 }

@@ -1,3 +1,43 @@
 .check_box_list {
   list-style-type: none;
+  column-count: 2;
+}
+.check_box_list > li {
+  white-space: nowrap;
+}
+
+
+@media all and (max-width: 509px){
+  .search_form_inputs{
+display: flex;
+justify-content: center;
+  }
+  .check_box_list{
+    column-count: 1;
+  }
+ .search_form{
+padding-bottom: 15%;
+  }
+}
+
+.equipment_field{
+  margin-top: 3%;
+  border: none;
+  margin-bottom: -3%;
+}
+
+.equipment_select{
+  display: flex;
+}
+
+.time_label, .time_input {
+  font-size: 0.95em;
+}
+
+.time_label{
+  font-weight: bold;
+}
+
+.search_form > .form_button{
+  align-content: space-around
 }

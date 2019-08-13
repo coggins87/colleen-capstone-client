@@ -1,0 +1,9 @@
+.results_list{
+  list-style-type: none;
+}
+
+.results {
+  display: inherit;
+  justify-content: center;
+  padding-bottom: 10%;
+}

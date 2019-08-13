@@ -45,7 +45,6 @@ export class ApiProvider extends React.Component {
   }
 
   isUserLoggedIn =()=>{
-    console.log('USER LOGGEDIN?', this.state.userId)
     if(TokenService.hasAuthToken()){
       const read = TokenService.readJwtToken();
       const user_Id = read.user_id;
@@ -55,7 +54,6 @@ export class ApiProvider extends React.Component {
     }
   }
   render() {
-    console.log('CONTEXT', this.state.userId)
     const value = {
       isUserLoggedIn: this.isUserLoggedIn,
       error: this.state.error,

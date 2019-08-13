@@ -1,0 +1,17 @@
+.user_main {
+  display: flex;
+  width: 100vmax;
+  padding-top: 13%;
+  padding-bottom: 15%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.user_main > h2 {
+  margin-bottom: 1%;
+  color: rgb(0, 153, 255)
+}
+
+.user_content {
+  padding-bottom: 10%;
+}

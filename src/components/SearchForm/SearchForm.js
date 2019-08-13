@@ -5,6 +5,7 @@ import Result from '../../components/Results/results'
 import WorkoutSearchService from '../../services/workout-search-service'
 import ApiContext from '../../context/ApiContext';
 import TokenService from '../../services/token-service'
+import uuid from 'uuid'
 import './SearchForm.css'
 class SearchForm extends React.Component {
   constructor(props){
@@ -25,23 +26,15 @@ class SearchForm extends React.Component {
     }
   }
   static contextType = ApiContext
+
+ 
   updateTime = e => {
 
     this.setState({
       time: e.target.value
     })
   }
-/*   updateBodyParts = event => {
-    let newParts = this.state.body_parts
-    newParts.forEach(part => {
-      if(part.value === event.target.value)
-      part.isChecked = event.target.checked
-    })
-    this.setState({
-      body_parts: newParts
-    })
-  }
- */
+
   updateEquipment = event => {
     let newEquipment = this.state.equipment
     newEquipment.forEach(equipment => {
@@ -68,12 +61,6 @@ class SearchForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-   /*  let parts=[]
-    let bodyParts = this.state.body_parts.filter(part => part.isChecked);
-    bodyParts.forEach(item => {
-      parts.push(item.value)
-    }); */
-    
     let time = this.state.time
     let equipment=[]
     let equipObj = this.state.equipment.filter(equip => equip.isChecked);
@@ -90,33 +77,28 @@ class SearchForm extends React.Component {
   }
   render(){
     
-    return (    <>
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="time">Select Your Workout Time Between 5 and 60 Minutes(required):</label>
-        <input id="time" type='number' min='5' max='60' onChange={this.updateTime} required></input>
-       {/*  <fieldset>
-        <legend htmlFor="body_parts">Select Up to 5 Body Parts to Target (optional):</legend>
-        <ul>
-        {
-          this.state.body_parts.map((part) => {
-            return (<CheckBoxBody handleCheck={this.updateBodyParts}  {...part} />)
-          })
-        }
-        </ul>
-
-      </fieldset> */}
-      <fieldset>
+    return (    <> 
+            <div className="search_form_inputs">
+      <form className="_form search_form " onSubmit={this.handleSubmit}>
+        <label className="time_label"htmlFor="time">Select Workout Time Between 5 to 60 Minutes (required): </label>
+        <input className="time_input" id="time" type='number' min='5' max='60' onChange={this.updateTime} required></input>
+    <div className="equiment_select">
+      <fieldset className="equipment_field">
         <legend>Select Equipment (optional):</legend>
         <ul className='check_box_list'>
         {
           this.state.equipment.map((equipment) => {
-            return (<CheckBoxEquip handleCheck={this.updateEquipment}  {...equipment} />)
+            return (<li key={uuid()}><CheckBoxEquip id={this.state.equipment.id} handleCheck={this.updateEquipment}  {...equipment} /></li>)
           })
         }
         </ul>
         </fieldset>
-        <button>Make My Workout</button>
+        </div>
+        <button className="form_button">Make My Workout</button>
+
       </form>
+      </div>
+
       {this.state.result.length > 0 ?  <Result result={this.state.result} time={this.state.time} saveWorkout={this.saveWorkout} /> : null}
 
       </>

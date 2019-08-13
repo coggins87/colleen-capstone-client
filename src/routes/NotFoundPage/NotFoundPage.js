@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './not-found.css'
 export default class NotFoundPage extends Component {
   render() {
     return (

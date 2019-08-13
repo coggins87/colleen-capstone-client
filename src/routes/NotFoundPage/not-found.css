@@ -1,0 +1,7 @@
+.NotFoundPage {
+  display: inherit;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}

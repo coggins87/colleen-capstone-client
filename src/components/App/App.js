@@ -13,6 +13,7 @@ import IdleService from '../../services/idle-service'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import ApiContext from '../../context/ApiContext';
+import Footer from '../Footer/footer'
 import ('./app.css')
 class App extends React.Component {
   
@@ -30,9 +31,7 @@ static getDerivedStateFromError(error) {
 
 componentDidMount (){
   this.context.isUserLoggedIn()
-  console.log('APP context', this.context)
-console.log('APP state', this.state)
-  console.log('APP LOGIN')
+ 
 
   /* set the function(callback)to call when a user goes idle
   we'll set this to logout a user when they're idle */
@@ -88,8 +87,10 @@ render(){
   <PrivateRoute path='/users/:userId' component={UserMainPage} /> 
   <Route component={NotFoundPage}/>
   </Switch>
-  
+
   </main>
+  <footer><Footer /></footer>
+
 </div>
   )
 }
