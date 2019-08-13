@@ -29,17 +29,17 @@ class RegisterForm extends React.Component {
   render(){
     const {error}=this.state
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form className='_form'onSubmit={this.handleSubmit}>
          <div role='alert'>
           {error && <p>{error}</p>}
         </div>
         <label htmlFor='Registration_user_name'>User Name:</label>
-        <input required type='text' name='user_name' id='Registration_user_name'></input>
+        <input className="form_input" placeholder="Required" required type='text' name='user_name' id='Registration_user_name'></input>
         <label htmlFor='Registration_password'>Password:</label>
-        <input required type='password' name='password' id='Registration_password'></input>
+        <input className="form_input" placeholder="Required" required type='password' name='password' id='Registration_password'></input>
         <label htmlFor='Registration_email'>Email:</label>
-        <input required type='text' name='email' id='Registration_email'></input>
-        <button>Register</button>
+        <input className="form_input" placeholder="Required" required type='email' name='email' id='Registration_email'></input>
+        <button className="form_button">Register</button>
       </form>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service.js'
 import ApiContext from '../../context/ApiContext.js';
+import ('./login-form.css')
 
 class LoginForm extends React.Component{
   static defaultProps = {
@@ -24,7 +25,6 @@ class LoginForm extends React.Component{
       user_name.value=""
       password.value=""
       this.context.handleLoginSuccess()
-      //this.props.onLoginRedirect()
     })
     .catch(res=> {
       this.setState({error: res.error})
@@ -34,13 +34,13 @@ class LoginForm extends React.Component{
   render(){
     const {error}= this.state
     return (
-      <form onSubmit={this.handleSubmitJwtAuth}>
+      <form className="_form" onSubmit={this.handleSubmitJwtAuth}>
         <div>{error &&<p>{error}</p>}</div>
       <label htmlFor='Login_user_name'>User Name:</label>
-      <input required type='text' name='user_name' id='Login_user_name'></input>
+      <input className="form_input" required type='text' placeholder="Required" name='user_name' id='Login_user_name'></input>
       <label htmlFor='Login_password'>Password:</label>
-      <input required type='password' name='password' id='Login_password'></input>
-      <button type='submit'>Log In</button>
+      <input className="form_input" required type='password' name='password' id='Login_password' placeholder="Required"></input>
+      <button className="form_button" type='submit'>Log In</button>
       </form>
 
     )

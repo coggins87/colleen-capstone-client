@@ -15,6 +15,7 @@
   height: 100vh;
   margin-top: -100px;
   background-image: url(../../media/background-landing=page.jpg);
+  background-color: white 0.75;
   background-size: cover
 
 }
@@ -27,7 +28,7 @@
 }
 .landing_title, .subheader{
   position: relative;
-  bottom: -75%;
+  bottom: -60%;
 }
 .subheader{
   list-style-type: none;
