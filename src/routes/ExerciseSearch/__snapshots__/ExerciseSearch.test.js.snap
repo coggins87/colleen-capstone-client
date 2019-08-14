@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExerciseSearch component renders the ExerciseSearch component by default 1`] = `
+<div
+  className="ExerciseSearch"
+>
+  <h2
+    className="ExerciseHeader"
+  >
+    Generate a Random AMRAP
+  </h2>
+  <SearchForm />
+</div>
+`;

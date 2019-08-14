@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage component renders the LoginPage component by default 1`] = `
+<section
+  className="LoginPage"
+>
+  <h2>
+    Log in
+  </h2>
+  <LoginForm
+    onLoginRedirect={[Function]}
+  />
+</section>
+`;

@@ -1,15 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import SearchForm from './SearchForm'
 
+jest.mock('uuid', () => jest.fn(() => '1'));
 
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(
-    
-      <SearchForm />
-    ,
-    div
-  )
-  ReactDOM.unmountComponentAtNode(div)
+describe(`SearchForm component`, () => {
+  const props = {
+    testObj: {},
+    history : {
+    testCheck: ()=>{}
+    },
+  }
+
+  it('renders a SearchForm by default', () => {
+    const wrapper = shallow(<SearchForm />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+
+  it('renders the SearchForm given props', () => {
+    const wrapper = shallow(<SearchForm {...props} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+
+ 
 })

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBoxEquip component renders a CheckBoxEquip by default 1`] = `
+<Fragment>
+  <input
+    type="checkbox"
+  />
+   
+</Fragment>
+`;
+
+exports[`CheckBoxEquip component renders the CheckBoxEquip given props 1`] = `
+<Fragment>
+  <input
+    type="checkbox"
+  />
+   
+</Fragment>
+`;

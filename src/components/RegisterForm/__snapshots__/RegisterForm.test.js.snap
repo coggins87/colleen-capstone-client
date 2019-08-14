@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterForm component renders a RegisterForm by default 1`] = `
+<form
+  className="_form"
+  onSubmit={[Function]}
+>
+  <div
+    role="alert"
+  />
+  <label
+    htmlFor="Registration_user_name"
+  >
+    User Name:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_user_name"
+    name="user_name"
+    placeholder="Required"
+    required={true}
+    type="text"
+  />
+  <label
+    htmlFor="Registration_password"
+  >
+    Password:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_password"
+    name="password"
+    placeholder="Required"
+    required={true}
+    type="password"
+  />
+  <label
+    htmlFor="Registration_email"
+  >
+    Email:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_email"
+    name="email"
+    placeholder="Required"
+    required={true}
+    type="email"
+  />
+  <button
+    className="form_button"
+  >
+    Register
+  </button>
+</form>
+`;
+
+exports[`RegisterForm component renders the RegisterForm given context 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "clearError": [Function],
+      "error": null,
+      "handleLoginSuccess": [Function],
+      "handleLogoutSuccess": [Function],
+      "isLoggedIn": false,
+      "isUserLoggedIn": [Function],
+      "setError": [Function],
+      "userId": null,
+    }
+  }
+>
+  <RegisterForm
+    onRegistrationSuccess={[Function]}
+  />
+</ContextProvider>
+`;
+
+exports[`RegisterForm component renders the RegisterForm given props 1`] = `
+<form
+  className="_form"
+  onSubmit={[Function]}
+>
+  <div
+    role="alert"
+  />
+  <label
+    htmlFor="Registration_user_name"
+  >
+    User Name:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_user_name"
+    name="user_name"
+    placeholder="Required"
+    required={true}
+    type="text"
+  />
+  <label
+    htmlFor="Registration_password"
+  >
+    Password:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_password"
+    name="password"
+    placeholder="Required"
+    required={true}
+    type="password"
+  />
+  <label
+    htmlFor="Registration_email"
+  >
+    Email:
+  </label>
+  <input
+    className="form_input"
+    id="Registration_email"
+    name="email"
+    placeholder="Required"
+    required={true}
+    type="email"
+  />
+  <button
+    className="form_button"
+  >
+    Register
+  </button>
+</form>
+`;

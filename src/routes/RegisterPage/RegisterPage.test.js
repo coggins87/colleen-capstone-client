@@ -1,13 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 import RegisterPage from './RegisterPage'
 
+describe(`RegisterPage component`, () => {
+const props = {
+  history: {
+    push:()=>{}
+  },
+}
 
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(
-    <RegisterPage/>,
-    div
-  )
-  ReactDOM.unmountComponentAtNode(div)
+  it('renders the RegisterPage component by default', () => {
+    const wrapper = shallow(<RegisterPage />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  it('renders the RegisterPage component given props', () => {
+    const wrapper = shallow(<RegisterPage {...props}/>)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+
+
 })

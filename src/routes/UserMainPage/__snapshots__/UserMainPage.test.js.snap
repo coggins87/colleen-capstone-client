@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserMainPage component renders the UserMainPage component by default 1`] = `
+<div
+  className="user_main"
+>
+  <h2>
+    My Saved Workouts
+  </h2>
+  <div
+    className="user_content"
+  >
+    <p>
+      Search for a workout, if you like what you find, save it here for later!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`UserMainPage component renders the UserMainPage component given props 1`] = `
+<div
+  className="user_main"
+>
+  <h2>
+    My Saved Workouts
+  </h2>
+  <div
+    className="user_content"
+  >
+    <p>
+      Search for a workout, if you like what you find, save it here for later!
+    </p>
+  </div>
+</div>
+`;

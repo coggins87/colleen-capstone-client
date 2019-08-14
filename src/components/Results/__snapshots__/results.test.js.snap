@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`results component renders the results given props 1`] = `
+<div
+  className="results"
+>
+  <ul
+    className="results_list"
+  >
+    <h3>
+      In 
+       minutes complete:
+    </h3>
+    <li
+      key="1"
+    >
+       
+       
+    </li>
+    <li
+      key="1"
+    >
+       
+       
+    </li>
+    <li
+      key="1"
+    >
+       
+       
+    </li>
+  </ul>
+</div>
+`;

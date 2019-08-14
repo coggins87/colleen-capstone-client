@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBoxBody component renders a CheckBoxBody by default 1`] = `
+<li
+  className="checkbox_list"
+>
+  <input
+    type="checkbox"
+  />
+   
+</li>
+`;
+
+exports[`CheckBoxBody component renders the CheckBoxBody given props 1`] = `
+<li
+  className="checkbox_list"
+>
+  <input
+    type="checkbox"
+  />
+   
+</li>
+`;

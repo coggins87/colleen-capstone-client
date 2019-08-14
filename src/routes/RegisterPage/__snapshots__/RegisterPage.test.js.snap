@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterPage component renders the RegisterPage component by default 1`] = `
+<section
+  className="RegisterPage"
+>
+  <h2>
+    Register
+  </h2>
+  <RegisterForm
+    onRegistrationSuccess={[Function]}
+  />
+</section>
+`;
+
+exports[`RegisterPage component renders the RegisterPage component given props 1`] = `
+<section
+  className="RegisterPage"
+>
+  <h2>
+    Register
+  </h2>
+  <RegisterForm
+    onRegistrationSuccess={[Function]}
+  />
+</section>
+`;

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders a Header by default 1`] = `
+<nav>
+  <div
+    className="header-div"
+  >
+    <h1>
+      <Link
+        className="header, link"
+        to="/"
+      >
+        AMRApp
+      </Link>
+    </h1>
+    <div
+      className="Header__tagline--wide"
+    >
+      <span>
+        Find your next workout!
+      </span>
+    </div>
+  </div>
+  <div
+    className="page-links"
+  >
+    <div
+      className="Header__not-logged-in"
+    >
+      <Link
+        className="link"
+        to="/users/login"
+      >
+        Log in
+      </Link>
+      <div>
+        <Link
+          className="link"
+          to="/register"
+        >
+          Register
+        </Link>
+      </div>
+    </div>
+    <Link
+      className="link"
+      to="/search"
+    >
+      Generate A Workout
+    </Link>
+  </div>
+</nav>
+`;
+
+exports[`Header component renders the Header given context 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "clearError": [Function],
+      "error": null,
+      "handleLoginSuccess": [Function],
+      "handleLogoutSuccess": [Function],
+      "isLoggedIn": false,
+      "isUserLoggedIn": [Function],
+      "setError": [Function],
+      "userId": null,
+    }
+  }
+>
+  <Header
+    history={
+      Object {
+        "push": [Function],
+      }
+    }
+    location={Object {}}
+  />
+</ContextProvider>
+`;
+
+exports[`Header component renders the Header given props 1`] = `
+<nav>
+  <div
+    className="header-div"
+  >
+    <h1>
+      <Link
+        className="header, link"
+        to="/"
+      >
+        AMRApp
+      </Link>
+    </h1>
+    <div
+      className="Header__tagline--wide"
+    >
+      <span>
+        Find your next workout!
+      </span>
+    </div>
+  </div>
+  <div
+    className="page-links"
+  >
+    <div
+      className="Header__not-logged-in"
+    >
+      <Link
+        className="link"
+        to="/users/login"
+      >
+        Log in
+      </Link>
+      <div>
+        <Link
+          className="link"
+          to="/register"
+        >
+          Register
+        </Link>
+      </div>
+    </div>
+    <Link
+      className="link"
+      to="/search"
+    >
+      Generate A Workout
+    </Link>
+  </div>
+</nav>
+`;
