@@ -4,7 +4,9 @@ exports[`RegisterPage component renders the RegisterPage component by default 1`
 <section
   className="RegisterPage"
 >
-  <h2>
+  <h2
+    className="page_header"
+  >
     Register
   </h2>
   <RegisterForm
@@ -17,7 +19,9 @@ exports[`RegisterPage component renders the RegisterPage component given props 1
 <section
   className="RegisterPage"
 >
-  <h2>
+  <h2
+    className="page_header"
+  >
     Register
   </h2>
   <RegisterForm

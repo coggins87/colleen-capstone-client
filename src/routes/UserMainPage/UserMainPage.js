@@ -4,7 +4,8 @@ import WorkoutSearchService from "../../services/workout-search-service";
 import "./UserMainPage.css";
 class UserMainPage extends React.Component {
   state = {
-    workouts: []
+    workouts: [],
+    error: null
   };
   static defaultProps = {
     match: { params: {} }
@@ -13,16 +14,26 @@ class UserMainPage extends React.Component {
   componentDidMount() {
     const userId = this.props.match.params.userId;
 
-    WorkoutSearchService.getUserWorkouts(userId).then(res =>
-      this.setState({
-        workouts: res
+    WorkoutSearchService.getUserWorkouts(userId)
+      .then(res => {
+        this.setState({
+          workouts: res
+        });
       })
-    );
+      .catch(res => {
+        if (res.message) {
+          this.setState({ error: "Something went wrong! Try again later." });
+        } else {
+          this.setState({ error: res.error });
+        }
+      });
   }
   render() {
+    const error = this.state.error;
     return (
       <div className="user_main">
         <h2>My Saved Workouts</h2>
+        <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="user_content">
           {this.state.workouts.length === 0 ? (
             <p>

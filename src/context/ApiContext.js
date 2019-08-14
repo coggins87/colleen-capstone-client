@@ -27,14 +27,12 @@ export class ApiProvider extends React.Component {
   };
 
   handleLoginSuccess = () => {
-    
     const read = TokenService.readJwtToken();
     const user_Id = read.user_id;
     this.setState({
       userId: user_Id,
       isLoggedIn: true
     });
-   
   };
 
   handleLogoutSuccess = () => {

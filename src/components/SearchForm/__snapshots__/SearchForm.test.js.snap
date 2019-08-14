@@ -5,6 +5,9 @@ exports[`SearchForm component renders a SearchForm by default 1`] = `
   <div
     className="search_form_inputs"
   >
+    <div
+      role="alert"
+    />
     <form
       className="_form search_form "
       onSubmit={[Function]}
@@ -13,7 +16,7 @@ exports[`SearchForm component renders a SearchForm by default 1`] = `
         className="time_label"
         htmlFor="time"
       >
-        Select Workout Time Between 5 to 60 Minutes (required):
+        Select Workout Time 5-60 Minutes (required):
          
       </label>
       <input
@@ -125,6 +128,9 @@ exports[`SearchForm component renders the SearchForm given props 1`] = `
   <div
     className="search_form_inputs"
   >
+    <div
+      role="alert"
+    />
     <form
       className="_form search_form "
       onSubmit={[Function]}
@@ -133,7 +139,7 @@ exports[`SearchForm component renders the SearchForm given props 1`] = `
         className="time_label"
         htmlFor="time"
       >
-        Select Workout Time Between 5 to 60 Minutes (required):
+        Select Workout Time 5-60 Minutes (required):
          
       </label>
       <input

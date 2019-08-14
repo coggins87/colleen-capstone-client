@@ -6,6 +6,14 @@
   white-space: nowrap;
 }
 
+.red{
+  background-color: red;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid red;
+  margin-bottom: 2%;
+}
 
 @media all and (max-width: 509px){
   .search_form_inputs{

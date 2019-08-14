@@ -1,9 +1,9 @@
-.results_list{
+.results_list {
   list-style-type: none;
 }
 
 .results {
   display: inherit;
-  justify-content: center;
+  text-align: center;
   padding-bottom: 10%;
 }

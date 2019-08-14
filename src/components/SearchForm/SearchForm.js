@@ -9,7 +9,7 @@ import "./SearchForm.css";
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
-
+    this.myRef = React.createRef()
     this.state = {
       error: null,
       time: 0,
@@ -52,7 +52,13 @@ class SearchForm extends React.Component {
     let user_id = token.user_id;
     let movements = this.state.result;
     let workoutToSave = { user_id, workout_length, movements };
-    WorkoutSearchService.saveWorkout(user_id, workoutToSave);
+    WorkoutSearchService.saveWorkout(user_id, workoutToSave)
+    .then(()=>{
+      this.setState({result: []})
+    })
+    .catch(res=>{
+      this.setState({error: res.error})
+    });
   };
 
   handleSubmit = e => {
@@ -64,15 +70,28 @@ class SearchForm extends React.Component {
       equipment.push(item.value);
     });
     let equipmentString = equipment.join(" ");
-
-    WorkoutSearchService.submitSearch(time, equipmentString).then(res => {
+    this.setState({ error: null });
+    WorkoutSearchService.submitSearch(time, equipmentString)
+    .then(res => {
       this.setState({ result: res });
+    })
+    .then(()=>{
+     window.scrollTo(0, this.myRef.current.offsetTop)   
+
+    })
+    .catch(res => {
+      if(res.message){this.setState({error: 'Something went wrong! Try again later.'})}
+      else {
+      this.setState({error: res.error})
+      }
     });
   };
   render() {
+    const  error  = this.state.error;
     return (
       <>
         <div className="search_form_inputs">
+          <div role="alert">{error && <p className="red">{error}</p>}</div>
           <form className="_form search_form " onSubmit={this.handleSubmit}>
             <label className="time_label" htmlFor="time">
               Select Workout Time 5-60 Minutes (required):{" "}
@@ -109,15 +128,19 @@ class SearchForm extends React.Component {
         </div>
 
         {this.state.result.length > 0 ? (
+          <div ref={this.myRef}>
           <Result
             result={this.state.result}
             time={this.state.time}
             saveWorkout={this.saveWorkout}
           />
+          </div>
         ) : null}
       </>
     );
   }
+  scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop)   
+
 }
 
 export default SearchForm;

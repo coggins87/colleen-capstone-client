@@ -8,6 +8,9 @@ exports[`UserMainPage component renders the UserMainPage component by default 1`
     My Saved Workouts
   </h2>
   <div
+    role="alert"
+  />
+  <div
     className="user_content"
   >
     <p>
@@ -24,6 +27,9 @@ exports[`UserMainPage component renders the UserMainPage component given props 1
   <h2>
     My Saved Workouts
   </h2>
+  <div
+    role="alert"
+  />
   <div
     className="user_content"
   >

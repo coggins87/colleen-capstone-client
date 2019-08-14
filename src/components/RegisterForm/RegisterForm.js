@@ -23,7 +23,10 @@ class RegisterForm extends React.Component {
       this.props.onRegistrationSuccess()
     })
     .catch(res => {
+      if(res.message){this.setState({error: 'Something went wrong! Try again later.'})}
+      else {
       this.setState({error: res.error})
+      }
     })
   }
   render(){
@@ -31,7 +34,7 @@ class RegisterForm extends React.Component {
     return(
       <form className='_form'onSubmit={this.handleSubmit}>
          <div role='alert'>
-          {error && <p>{error}</p>}
+          {error && <p className="red">{error}</p>}
         </div>
         <label htmlFor='Registration_user_name'>User Name:</label>
         <input className="form_input" placeholder="Required" required type='text' name='user_name' id='Registration_user_name'></input>

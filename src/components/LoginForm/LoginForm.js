@@ -27,14 +27,17 @@ class LoginForm extends React.Component {
         this.context.handleLoginSuccess();
       })
       .catch(res => {
-        this.setState({ error: res.error });
+        if(res.message){this.setState({error: 'Something went wrong! Try again later.'})}
+        else {
+        this.setState({error: res.error})
+        }
       });
   };
   render() {
     const { error } = this.state;
     return (
       <form className="_form" onSubmit={this.handleSubmitJwtAuth}>
-        <div className="error">{error && <p>{error}</p>}</div>
+        <div className="error">{error && <p className="red">{error}</p>}</div>
         <label htmlFor="Login_user_name">User Name:</label>
         <input
           className="form_input"
