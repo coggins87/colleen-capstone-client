@@ -50,10 +50,7 @@ const AuthApiService = {
     : res.json()
     )
     .then(res => {
-      /* similar logic to whenever a user logs in, only differences:
-      1. don't need to queue the idle timers again as user is already logged in
-      2. catch error here as this refresh is happening behind the scenes */
-
+      
       TokenService.saveAuthToken(res.authToken)
       TokenService.queueCallbackBeforeExpiry(()=>{
         AuthApiService.postRefreshToken()
@@ -61,7 +58,6 @@ const AuthApiService = {
       return res
     })
     .catch(err=>{
-      console.log('refresh token request error')
       console.error(err)
     })
     },
