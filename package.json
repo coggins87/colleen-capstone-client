@@ -1,5 +1,5 @@
 {
-  "name": "amrap-client-colleen",
+  "name": "amrap-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "now --target production",
-    "postdeploy": "now alias -A ./build/now.json"
+    "postdeploy": "now --target production alias -A ./build/now.json"
   },
   "eslintConfig": {
     "extends": "react-app"
