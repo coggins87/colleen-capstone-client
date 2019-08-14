@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  
 }
 
 .ExerciseHeader {
-margin-top: 15%;
+  margin-top: 15%;
   text-align: center;
-padding-top: 10%;
+  padding-top: 10%;
+  font-family: "Nanum Myeongjo", serif;
 }
 
-@media all and (max-width: 500px){
-  .ExerciseSearch{
+@media all and (max-width: 500px) {
+  .ExerciseSearch {
     padding-top: 20%;
   }
 }

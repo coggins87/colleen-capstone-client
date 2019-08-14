@@ -12,7 +12,8 @@
   height: 100%;
   width: 100%;
   font-family: 'Lexend Exa', sans-serif;
-
+  background-color: rgb(77, 77, 77);
+  color: white;
 }
 
 .App_main{

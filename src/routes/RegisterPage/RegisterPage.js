@@ -14,7 +14,7 @@ class RegisterPage extends React.Component {
   render(){
     return(
       <section className="RegisterPage">
-        <h2>Register</h2>
+        <h2 className="page_header">Register</h2>
      <RegisterForm 
      onRegistrationSuccess={this.handleRegistrationSuccess}
      />

@@ -75,7 +75,7 @@ class SearchForm extends React.Component {
         <div className="search_form_inputs">
           <form className="_form search_form " onSubmit={this.handleSubmit}>
             <label className="time_label" htmlFor="time">
-              Select Workout Time Between 5 to 60 Minutes (required):{" "}
+              Select Workout Time 5-60 Minutes (required):{" "}
             </label>
             <input
               className="time_input"
