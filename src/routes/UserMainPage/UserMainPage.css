@@ -5,7 +5,7 @@
   padding-left: 5%;
 }
 
-.user_main > h2 {
+.user_header {
   margin-bottom: 1%;
   color: rgb(0, 153, 255);
   text-align: center;
@@ -16,7 +16,7 @@
 }
 
 
-@media all and(max-width: 500px){
+@media all and (max-width: 500px){
   .user_main {
     padding-top: 35%;
   }

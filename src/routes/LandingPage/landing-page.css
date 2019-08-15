@@ -59,14 +59,14 @@ p {
 
 @media all and (max-width: 500px){
   .Landing_page{
+
     margin-bottom: 5%;
- padding-top: 12%;
+ margin-top: 25%;
    }
   .heading_page {
     background-size: cover;
     min-height: 200px;
-    padding-top: 15%;
-  }
+ }
   
   }
 @media all and (max-width: 800px){

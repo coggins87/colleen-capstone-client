@@ -32,7 +32,7 @@ class UserMainPage extends React.Component {
     const error = this.state.error;
     return (
       <div className="user_main">
-        <h2>My Saved Workouts</h2>
+        <h2 className="user_header">My Saved Workouts</h2>
         <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="user_content">
           {this.state.workouts.length === 0 ? (
