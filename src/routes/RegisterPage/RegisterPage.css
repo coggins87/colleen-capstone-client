@@ -4,6 +4,12 @@
   margin: auto;
   padding-top: 9%;
 }
+
+.password_rule{
+  font-size: xx-small;
+  max-width: 50%;
+
+}
 @media all and (max-width: 800px){
   .RegisterPage{
     padding-top: 20%

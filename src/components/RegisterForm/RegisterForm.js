@@ -39,6 +39,7 @@ class RegisterForm extends React.Component {
         <label htmlFor='Registration_user_name'>User Name:</label>
         <input className="form_input" placeholder="Required" required type='text' name='user_name' id='Registration_user_name'></input>
         <label htmlFor='Registration_password'>Password:</label>
+        <p className="password_rule">Must be between 8 and 64 characters with at least 1 upper case, lower case, and special character</p>
         <input className="form_input" placeholder="Required" required type='password' name='password' id='Registration_password'></input>
         <label htmlFor='Registration_email'>Email:</label>
         <input className="form_input" placeholder="Required" required type='email' name='email' id='Registration_email'></input>
