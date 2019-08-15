@@ -13,6 +13,11 @@
 
 @media all and (max-width: 500px) {
   .ExerciseSearch {
+    padding-top: 15%;
+  }
+}
+@media all and (max-width: 350px) {
+  .ExerciseSearch {
     padding-top: 20%;
   }
 }

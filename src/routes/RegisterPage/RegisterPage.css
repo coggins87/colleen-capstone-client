@@ -1,5 +1,5 @@
 .RegisterPage {
-  display: flex;
+  display: inherit;
   flex-direction: column;
   margin: auto;
   padding-top: 9%;
@@ -8,6 +8,9 @@
 .password_rule{
   font-size: xx-small;
   max-width: 50%;
+  text-align: center;
+  padding: 1% 20%;
+  margin: inherit;
 
 }
 @media all and (max-width: 800px){

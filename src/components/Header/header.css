@@ -12,42 +12,6 @@ h1 {
   font-family: 'Nanum Myeongjo', serif;
 
 }
-@media all and (max-width: 510px) {
-  nav {
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  .page-links {
-    justify-content: left;
-    text-align: center;
-  }
-  .Header__not-logged-in {
-    text-align: center;
-  }
-  .Header__logged-in {
-    text-align: center;
-  }
-  .link:click {
-    color: rgb(0, 183, 255);
-  }
-}
-@media all and (max-width: 1100px) {
-  nav {
-    align-content: center;
-    width: 100%;
-  }
-}
-@media all and (max-width: 800px) {
-  nav {
-    align-content: center;
-    width: 100%;
-  }
-}
 .Header__tagline--wide {
   color: rgb(192, 185, 176);
   margin-top: -5%;
@@ -77,4 +41,41 @@ h1 > .link {
 
 .link:hover {
   color: rgb(0, 183, 255);
+}
+
+@media all and (max-width: 1100px) {
+  nav {
+    align-content: center;
+    width: 100%;
+  }
+}
+@media all and (max-width: 800px) {
+  nav {
+    align-content: center;
+    width: 100%;
+  }
+}
+@media all and (max-width: 510px) {
+  nav {
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  .page-links {
+    justify-content: left;
+    text-align: center;
+  }
+  .Header__not-logged-in {
+    text-align: center;
+  }
+  .Header__logged-in {
+    text-align: center;
+  }
+  .link:click {
+    color: rgb(0, 183, 255);
+  }
 }

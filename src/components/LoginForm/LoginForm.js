@@ -56,7 +56,7 @@ class LoginForm extends React.Component {
           id="Login_password"
           placeholder="Required"
         />
-        <button className="form_button" type="submit">
+        <button id="login_button" className="form_button" type="submit">
           Log In
         </button>
       </form>
