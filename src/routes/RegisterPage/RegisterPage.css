@@ -4,9 +4,19 @@
   margin: auto;
   padding-top: 9%;
 }
-
+@media all and (max-width: 800px){
+  .RegisterPage{
+    padding-top: 20%
+  }
+}
 @media all and (max-width: 500px){
   .RegisterPage{
-    padding-top: 25%
+    padding-top: 30%
+  }
+}
+
+@media all and (max-width: 350px){
+  .RegisterPage{
+    padding-top: 35%
   }
 }

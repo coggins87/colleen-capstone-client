@@ -1,11 +1,32 @@
 .LoginPage {
-  display: flex;
+  display: inherit;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
   padding-top: 5%;
+  align-content: center;
 }
 
 .page_header {
   font-family: "Nanum Myeongjo", serif;
 
+}
+@media all and (max-width: 1000px){
+  .LoginPage{
+    padding-top: 12%
+  }
+}
+@media all and (max-width: 800px){
+  .LoginPage{
+    padding-top: 15%
+  }
+}
+@media all and (max-width: 500px){
+  .LoginPage{
+    padding-top: 28%
+  }
+}
+@media all and (max-width: 350px){
+  .LoginPage{
+    padding-top: 34%
+  }
 }

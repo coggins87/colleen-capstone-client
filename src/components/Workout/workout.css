@@ -4,4 +4,5 @@
 
 .saved_workout_item {
   padding: 5px;
+  list-style-type: none;
 }

@@ -5,12 +5,14 @@ import './workout-list.css'
 class WorkoutList extends React.Component {
 
 render(){
-  return (
-    this.props.workouts.map(workout => { 
+  return (<>
+    <h3 className="subheader">Complete as many reps as possible:</h3>
+    {this.props.workouts.map(workout => { 
       return (
   <Workout key={uuid()} workout={workout}/>)
 
-    }))
+    })}
+    </>)
 }
 }
 

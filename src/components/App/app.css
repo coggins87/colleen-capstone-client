@@ -1,24 +1,14 @@
-#root,
-.App_main {
-  height: 100vh;
-  display: flex;
-}
 .App {
+  background-color: rgb(77, 77, 77);
+}
+.App_main {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 20%;
-  align-items: stretch;
   margin: 0 auto;
-  height: 100%;
-  width: 100%;
+  color: white;
+  align-content: center;
+  flex-direction: column;
   font-family: "Lexend Exa", sans-serif;
   background-color: rgb(77, 77, 77);
-  color: white;
-}
-
-.App_main {
-  /*  padding-bottom: 15%; */
-  width: 100vw;
 }
 
 footer {
@@ -29,13 +19,15 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 1%;
+  padding: 1%;
   width: 100%;
 }
 
 @media all and (max-width: 1000) {
-  .App {
-    width: 100vmax;
-    height: 100vh;
+  .App_main {
+    margin-bottom: 10%;
+  }
+  footer {
+    margin-top: 5%;
   }
 }

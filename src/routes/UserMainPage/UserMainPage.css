@@ -1,17 +1,23 @@
 .user_main {
-  display: flex;
-  width: 100vmax;
+ 
   padding-top: 13%;
   padding-bottom: 15%;
-  flex-direction: column;
-  text-align: center;
+  padding-left: 5%;
 }
 
 .user_main > h2 {
   margin-bottom: 1%;
-  color: rgb(0, 153, 255)
+  color: rgb(0, 153, 255);
+  text-align: center;
 }
 
 .user_content {
   padding-bottom: 10%;
+}
+
+
+@media all and(max-width: 500px){
+  .user_main {
+    padding-top: 35%;
+  }
 }

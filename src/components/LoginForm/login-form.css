@@ -1,15 +1,13 @@
 ._form {
-  display: flex;
+  display: inherit;
   flex-direction: column;
-  width: 50vw;
   font-size: 1.0em;
+  align-items: center;
 }
 
 
-
 .form_input {
-  padding: 7px;
-  font-size: 100%;
+  padding: 2%;
   margin: 2%;
 }
 
@@ -37,5 +35,5 @@
 }
 
 .error {
-  font-size: 2em;
-}
+/*   font-size: 2em;
+ */}
