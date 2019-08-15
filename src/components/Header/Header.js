@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
 import ApiContext from '../../context/ApiContext';
-import ('./header.css')
+import './header.css'
 
 class Header extends React.Component {
   static defaultProps = {

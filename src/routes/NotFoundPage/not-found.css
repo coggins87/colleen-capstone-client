@@ -5,3 +5,15 @@
   text-align: center;
   margin: auto;
 }
+
+@media all and (max-width: 800px){
+  .NotFoundPage {margin-top: 20%;}
+}
+
+@media all and (max-width: 600px){
+  .NotFoundPage {margin-top: 30%;}
+}
+
+@media all and (max-width: 400px){
+  .NotFoundPage {margin-top: 40%;}
+}

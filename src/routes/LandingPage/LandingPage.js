@@ -1,5 +1,6 @@
 import React from "react";
-import("./landing-page.css");
+import "./landing-page.css";
+
 export default function LandingPage() {
   return (
     <div className="Landing_page">

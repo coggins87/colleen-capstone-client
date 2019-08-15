@@ -1,6 +1,7 @@
 import React from 'react'
 import RegisterForm from '../../components/RegisterForm/RegisterForm'
-import ('./RegisterPage.css')
+import './RegisterPage.css'
+
 class RegisterPage extends React.Component {
  static defaultProps = {
    history: {

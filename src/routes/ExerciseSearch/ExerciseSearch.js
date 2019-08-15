@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchForm from '../../components/SearchForm/SearchForm'
-import ('./ExerciseSearch.css')
+import './ExerciseSearch.css'
+
 class ExerciseSearch extends React.Component {
 
  state = {

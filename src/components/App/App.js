@@ -14,7 +14,7 @@ import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
 import ApiContext from "../../context/ApiContext";
 import Footer from "../Footer/footer";
-import("./app.css");
+import "./app.css";
 class App extends React.Component {
   static contextType = ApiContext;
   state = {
