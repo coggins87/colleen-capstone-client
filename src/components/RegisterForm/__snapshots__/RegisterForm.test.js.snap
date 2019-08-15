@@ -26,6 +26,11 @@ exports[`RegisterForm component renders a RegisterForm by default 1`] = `
   >
     Password:
   </label>
+  <p
+    className="password_rule"
+  >
+    Must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
+  </p>
   <input
     className="form_input"
     id="Registration_password"
@@ -102,6 +107,11 @@ exports[`RegisterForm component renders the RegisterForm given props 1`] = `
   >
     Password:
   </label>
+  <p
+    className="password_rule"
+  >
+    Must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
+  </p>
   <input
     className="form_input"
     id="Registration_password"

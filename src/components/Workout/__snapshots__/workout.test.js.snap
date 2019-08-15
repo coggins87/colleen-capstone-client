@@ -7,7 +7,7 @@ exports[`Workout component renders the Workout given props 1`] = `
   >
     In 
     1
-     minutes complete:
+     minutes:
   </h3>
   <li
     className="saved_workout_item"

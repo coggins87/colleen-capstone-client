@@ -12,44 +12,38 @@ exports[`LandingPage component renders the LandingPage component by default 1`] 
     >
       Create randomly generated AMRAP workouts
     </h2>
-    <li
+    <h4
       className="subheader"
     >
-      <h4>
-        From a database of movements curated by a licensed physical therapist
-      </h4>
-    </li>
+      From a database of movements curated by a licensed physical therapist
+    </h4>
   </div>
-  <div
-    className="info_"
+  <ul
+    className="app_desc"
   >
-    <ul
-      className="app_desc"
+    <li>
+      Click 'Generate A Workout' to search for a new AMRAP workout
+    </li>
+    <li>
+      Create an account or log in to save workouts for later!
+    </li>
+  </ul>
+  <div
+    className="definition"
+  >
+    <p
+      className="def_word"
     >
-      <li>
-        Click 'Generate A Workout' to search for a new AMRAP workout
-      </li>
-      <li>
-        Create an account or log in to save workouts for later!
-      </li>
-    </ul>
-    <div
-      className="definition"
-    >
-      <p
-        className="def_word"
-      >
-        AMRAP[amrap]:
-      </p>
-      <p>
-         
-        noun
-        <br />
-        1. An abbreviation that means 'as many reps as possible'
-        <br />
-        2. To complete a circuit of exercises as many times as possible within a specific period of time
-      </p>
-    </div>
+      AMRAP[amrap]:
+    </p>
+    <p>
+       
+      noun
+      <br />
+      1. An abbreviation that means 'as many reps as possible'
+      <br />
+      2. To complete a circuit of exercises as many times as possible within a specific period of time
+    </p>
   </div>
 </div>
 `;
