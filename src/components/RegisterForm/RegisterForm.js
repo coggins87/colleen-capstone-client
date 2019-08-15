@@ -1,6 +1,6 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
-
+import './register-form.css'
 class RegisterForm extends React.Component {
   static defaultProps = {
     onRegistrationSuccess: () => {}

@@ -2,7 +2,7 @@
   display: inherit;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 5%;
+  padding-top: 6%;
   align-content: center;
 }
 
@@ -28,6 +28,6 @@
 }
 @media all and (max-width: 350px){
   .LoginPage{
-    padding-top: 34%
+    padding-top: 35%
   }
 }

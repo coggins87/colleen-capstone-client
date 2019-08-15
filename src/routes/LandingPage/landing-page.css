@@ -1,4 +1,4 @@
-.Landing_page{
+.Landing_page {
   display: inherit;
   flex-direction: column;
   align-content: space-around;
@@ -8,8 +8,7 @@
   padding-bottom: 6%;
 }
 
-
- .heading_page {
+.heading_page {
   display: inherit;
   flex-direction: inherit;
   align-content: flex-end;
@@ -21,12 +20,10 @@
   padding: 1%;
 }
 
-
 .landing_title {
   font-family: "Nanum Myeongjo", serif;
-
 }
-.subheader{
+.subheader {
   list-style-type: none;
   padding: 0px;
 }
@@ -48,7 +45,6 @@ li {
   margin: 0 auto;
   border: dashed 2px rgb(191, 196, 201);
   padding: 2%;
-  
 }
 .def_word {
   font-weight: bold;
@@ -56,43 +52,52 @@ li {
 p {
   margin: 0px;
 }
-
-@media all and (max-width: 500px){
-  .Landing_page{
-
+@media all and (max-width: 330px) {
+  .Landing_page {
     margin-bottom: 5%;
- margin-top: 25%;
-   }
+    margin-top: 40%;
+  }
   .heading_page {
     background-size: cover;
     min-height: 200px;
- }
-  
+ 
   }
-@media all and (max-width: 800px){
-  .Landing_page{
-   margin-bottom: 2%;
- }
+}
+@media all and (max-width: 509px) {
+  .Landing_page {
+    margin-bottom: 5%;
+    margin-top: 22%;
+  }
+  .heading_page {
+    background-size: cover;
+    min-height: 200px;
+ 
+  }
+}
+@media all and (max-width: 800px) {
+  .Landing_page {
+    margin-bottom: 2%;
+  }
   .heading_page {
     background-size: cover;
     min-height: 200px;
     padding-top: 5%;
   }
-  
-  }
+}
 
-  @media all and (max-width: 1000px){
-    .Landing_page {
-      padding-bottom: 8%;
-      padding-top: 13%;
-    }
-    .heading_page {
-      background-size: cover;
-      min-height: 200px;
+@media all and (max-width: 1000px) {
+  .Landing_page {
+    padding-bottom: 8%;
+    /*       padding-top: 13%;
+ */
   }
-    .app_desc, .definition {
-      width: 80%;
-      justify-self: center;
-    }
-    
-    }
+  .heading_page {
+    background-size: cover;
+    min-height: 200px;
+  }
+  .app_desc,
+  .definition {
+    width: 80%;
+    justify-self: center;
+  }
+}

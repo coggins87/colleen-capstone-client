@@ -4,7 +4,9 @@ exports[`UserMainPage component renders the UserMainPage component by default 1`
 <div
   className="user_main"
 >
-  <h2>
+  <h2
+    className="user_header"
+  >
     My Saved Workouts
   </h2>
   <div
@@ -24,7 +26,9 @@ exports[`UserMainPage component renders the UserMainPage component given props 1
 <div
   className="user_main"
 >
-  <h2>
+  <h2
+    className="user_header"
+  >
     My Saved Workouts
   </h2>
   <div
