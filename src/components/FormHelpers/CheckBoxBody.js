@@ -1,5 +1,4 @@
 import React from "react";
-import "./check-box.css";
 
 export const CheckBoxBody = props => {
   return (

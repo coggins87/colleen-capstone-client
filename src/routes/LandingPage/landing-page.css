@@ -3,7 +3,6 @@
   flex-direction: column;
   align-content: space-around;
   text-align: center;
-  margin: 0 auto;
   padding-top: 11%;
   padding-bottom: 6%;
 }
@@ -12,12 +11,11 @@
   display: inherit;
   flex-direction: inherit;
   align-content: flex-end;
-  width: 100vw;
   margin-top: -5%;
   background-image: url(../../media/background-landing=page.jpg);
   background-size: cover;
   color: white;
-  padding: 1%;
+  padding: 8%;
 }
 
 .landing_title {
