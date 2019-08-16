@@ -13,7 +13,7 @@ This app allows registered and non registered users to search for randomly gener
 
 Front-end: React, HTML, CSS, Javascript, testing with Enzyme
 
-API: Node.js, Express, PostgreSQL, Knex, testing with Mocha
+Back-end: Node.js, Express, PostgreSQL, Knex, testing with Mocha
 
 
 Icons made by Freepik from "https://www.flaticon.com/"
@@ -23,6 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. After cloning the repo, run npm install. 
 2. Copy example.env to .env, and update with appropriate API address as needed.
+--/src/config.js contains current API endpoint and token key.
 3. Run npm start to run app in development mode (at http://localhost:3000)
 
 ## Additional Scripts
@@ -43,6 +44,12 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+## Deployment 
+To deploy using heroku
+### 'heroku push master'
+### 'npm run deploy'
 
 ## Learn More
 
