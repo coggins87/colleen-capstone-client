@@ -6,19 +6,26 @@ export default function Footer() {
       <div className="instructions">
         <p>
           To log in as test user: <br />
-          Username: Test<br />
+          Username: Test
+          <br />
           Password: Test123!
         </p>
       </div>
       <div className="external_links">
         <p>
-          <a href="https://github.com/thinkful-ei-emu/colleen-capstone-client">Project Code: Client</a>
+          <a href="https://github.com/thinkful-ei-emu/colleen-capstone-client">
+            Project Code: Client
+          </a>
         </p>
         <p>
-          <a href="https://github.com/thinkful-ei-emu/amrap-api-colleen">Project Code: Server</a>
+          <a href="https://github.com/thinkful-ei-emu/amrap-api-colleen">
+            Project Code: Server
+          </a>
         </p>
         <p>
-          <a href="https://thinkful-ei-emu.github.io/portfolio-colleen/">My Portfolio</a>
+          <a href="https://thinkful-ei-emu.github.io/portfolio-colleen/">
+            My Portfolio
+          </a>
         </p>
       </div>
     </div>

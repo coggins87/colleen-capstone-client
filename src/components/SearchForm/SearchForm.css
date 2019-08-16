@@ -6,7 +6,7 @@
   white-space: nowrap;
 }
 
-.red{
+.red {
   background-color: red;
   font-weight: bold;
   text-align: center;
@@ -15,34 +15,34 @@
   margin-bottom: 2%;
 }
 
-@media all and (max-width: 509px){
-  .search_form_inputs{
-display: flex;
-justify-content: center;
+@media all and (max-width: 509px) {
+  .search_form_inputs {
+    display: flex;
+    justify-content: center;
   }
-  .check_box_list{
+  .check_box_list {
     column-count: 1;
   }
- .search_form{
-padding-bottom: 15%;
+  .search_form {
+    padding-bottom: 15%;
   }
 }
 
-.equipment_field{
+.equipment_field {
   margin-top: 3%;
   border: none;
   margin-bottom: -3%;
 }
 
-.equipment_select{
+.equipment_select {
   display: flex;
 }
 
-.time_label, .time_input {
+.time_label,
+.time_input {
   font-size: 0.95em;
 }
 
-
-.search_form > .form_button{
-  align-content: space-around
+.search_form > .form_button {
+  align-content: space-around;
 }

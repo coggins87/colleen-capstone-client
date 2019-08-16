@@ -1,29 +1,27 @@
 .footer {
-  color: rgb(170, 169, 165);
+  color: rgb(201, 197, 192);
   display: flex;
   align-content: space-between;
   width: 100vw;
   font-size: 0.6em;
 }
-.instructions{
+.instructions {
   display: inherit;
   margin: 0 auto;
 }
-.external_links{
-display: inherit;
-flex-direction: column;
-text-align: right;
-color: white;
-margin: auto;
+.external_links {
+  display: inherit;
+  flex-direction: column;
+  text-align: right;
+  color: white;
+  margin: auto;
 }
-
 
 .external_links > p > a {
   margin: 0 auto;
   flex-wrap: nowrap;
-  color: rgb(173, 169, 165);
+  color: rgb(201, 197, 192);
   text-decoration: none;
-
 }
 .external_links > p > a:hover {
   color: white;

@@ -3,37 +3,37 @@
   flex-direction: column;
   margin: 0 auto;
   padding-top: 6%;
-/*   align-content: center;
- */}
+  /*   align-content: center;
+ */
+}
 
 .page_header {
   text-align: center;
   font-family: "Nanum Myeongjo", serif;
-
 }
-@media all and (min-width: 1000px){
-  .LoginPage{
-    padding-top: 12%
+@media all and (min-width: 1000px) {
+  .LoginPage {
+    padding-top: 12%;
   }
 }
-@media all and (max-width: 1000px){
-  .LoginPage{
-    padding-top: 12%
+@media all and (max-width: 1000px) {
+  .LoginPage {
+    padding-top: 12%;
   }
 }
-@media all and (max-width: 800px){
-  .LoginPage{
-    padding-top: 15%
+@media all and (max-width: 800px) {
+  .LoginPage {
+    padding-top: 15%;
   }
 }
-@media all and (max-width: 500px){
-  .LoginPage{
-    padding-top: 30%
+@media all and (max-width: 500px) {
+  .LoginPage {
+    padding-top: 30%;
   }
 }
-@media all and (max-width: 350px){
-  .LoginPage{
+@media all and (max-width: 350px) {
+  .LoginPage {
     padding-top: 38%;
-    padding-bottom: 5%
+    padding-bottom: 5%;
   }
 }

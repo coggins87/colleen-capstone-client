@@ -27,9 +27,10 @@ class LoginForm extends React.Component {
         this.context.handleLoginSuccess();
       })
       .catch(res => {
-        if(res.message){this.setState({error: 'Something went wrong! Try again later.'})}
-        else {
-        this.setState({error: res.error})
+        if (res.message) {
+          this.setState({ error: "Something went wrong! Try again later." });
+        } else {
+          this.setState({ error: res.error });
         }
       });
   };

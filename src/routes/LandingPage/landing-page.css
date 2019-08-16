@@ -55,7 +55,7 @@ p {
 
 @media all and (min-width: 1300px) {
   .Landing_page {
-   padding-top: 10%;
+    padding-top: 10%;
   }
   .heading_page {
     height: 100%;
@@ -70,7 +70,6 @@ p {
 @media all and (max-width: 1000px) {
   .Landing_page {
     padding-bottom: 8%;
-   
   }
   .heading_page {
     background-size: cover;
@@ -82,7 +81,6 @@ p {
     justify-self: center;
   }
 }
-
 
 @media all and (max-width: 800px) {
   .Landing_page {
@@ -103,7 +101,6 @@ p {
   .heading_page {
     background-size: cover;
     min-height: 200px;
- 
   }
 }
 @media all and (max-width: 350px) {
@@ -114,8 +111,5 @@ p {
   .heading_page {
     background-size: cover;
     min-height: 200px;
- 
   }
 }
-
-

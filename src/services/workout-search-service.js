@@ -14,30 +14,25 @@ const WorkoutSearchService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-  getUserWorkouts(userId){
+  getUserWorkouts(userId) {
     return fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
-      headers: { 'authorization': `bearer ${TokenService.getAuthToken()}`
-    },
-  })
-  .then(res =>
-    (!res.ok)
-    ? res.json().then(e => Promise.reject(e))
-    : res.json()
-    )
+      headers: { authorization: `bearer ${TokenService.getAuthToken()}` }
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
   },
-  saveWorkout(userId, newWorkout){
+  saveWorkout(userId, newWorkout) {
     return fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
       method: "POST",
-      headers: { "content-type": "application/json",'authorization': `bearer ${TokenService.getAuthToken()}`
-    },
-      body: JSON.stringify(newWorkout) 
-    })
-      .then(res=>
-        !res.ok ? res.json().then(e=> Promise.reject(e)): res.json()
-        )
-      
-    },
-  
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify(newWorkout)
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  }
 };
 
 export default WorkoutSearchService;

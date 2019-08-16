@@ -9,7 +9,7 @@ import "./SearchForm.css";
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
-    this.myRef = React.createRef()
+    this.myRef = React.createRef();
     this.state = {
       error: null,
       time: 0,
@@ -53,12 +53,12 @@ class SearchForm extends React.Component {
     let movements = this.state.result;
     let workoutToSave = { user_id, workout_length, movements };
     WorkoutSearchService.saveWorkout(user_id, workoutToSave)
-    .then(()=>{
-      this.setState({result: []})
-    })
-    .catch(res=>{
-      this.setState({error: res.error})
-    });
+      .then(() => {
+        this.setState({ result: [] });
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
   };
 
   handleSubmit = e => {
@@ -72,22 +72,22 @@ class SearchForm extends React.Component {
     let equipmentString = equipment.join(" ");
     this.setState({ error: null });
     WorkoutSearchService.submitSearch(time, equipmentString)
-    .then(res => {
-      this.setState({ result: res });
-    })
-    .then(()=>{
-     window.scrollTo(0, this.myRef.current.offsetTop)   
-
-    })
-    .catch(res => {
-      if(res.message){this.setState({error: 'Something went wrong! Try again later.'})}
-      else {
-      this.setState({error: res.error})
-      }
-    });
+      .then(res => {
+        this.setState({ result: res });
+      })
+      .then(() => {
+        window.scrollTo(0, this.myRef.current.offsetTop);
+      })
+      .catch(res => {
+        if (res.message) {
+          this.setState({ error: "Something went wrong! Try again later." });
+        } else {
+          this.setState({ error: res.error });
+        }
+      });
   };
   render() {
-    const  error  = this.state.error;
+    const error = this.state.error;
     return (
       <>
         <div className="search_form_inputs">
@@ -129,18 +129,17 @@ class SearchForm extends React.Component {
 
         {this.state.result.length > 0 ? (
           <div ref={this.myRef}>
-          <Result
-            result={this.state.result}
-            time={this.state.time}
-            saveWorkout={this.saveWorkout}
-          />
+            <Result
+              result={this.state.result}
+              time={this.state.time}
+              saveWorkout={this.saveWorkout}
+            />
           </div>
         ) : null}
       </>
     );
   }
-  scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop)   
-
+  scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop);
 }
 
 export default SearchForm;

@@ -37,20 +37,20 @@ export class ApiProvider extends React.Component {
 
   handleLogoutSuccess = () => {
     this.setState({
-      userId : null,
+      userId: null,
       isLoggedIn: false
-    })
-  }
+    });
+  };
 
-  isUserLoggedIn =()=>{
-    if(TokenService.hasAuthToken()){
+  isUserLoggedIn = () => {
+    if (TokenService.hasAuthToken()) {
       const read = TokenService.readJwtToken();
       const user_Id = read.user_id;
       this.setState({
         userId: user_Id
       });
     }
-  }
+  };
   render() {
     const value = {
       isUserLoggedIn: this.isUserLoggedIn,
@@ -60,7 +60,7 @@ export class ApiProvider extends React.Component {
       clearError: this.clearError,
       userId: this.state.userId,
       handleLoginSuccess: this.handleLoginSuccess,
-      handleLogoutSuccess: this.handleLogoutSuccess,
+      handleLogoutSuccess: this.handleLogoutSuccess
     };
     return (
       <ApiContext.Provider value={value}>

@@ -1,12 +1,14 @@
 import React from "react";
-import uuid from 'uuid';
-import './workout.css';
+import uuid from "uuid";
+import "./workout.css";
 
 export default class Workout extends React.Component {
   render() {
     return (
       <ul>
-        <h3 className="saved_workout_head">In {this.props.workout.workout_length} minutes:</h3>
+        <h3 className="saved_workout_head">
+          In {this.props.workout.workout_length} minutes:
+        </h3>
         {this.props.workout.movements.map(movement => {
           return (
             <li className="saved_workout_item" key={uuid()}>

@@ -14,12 +14,12 @@
   padding-bottom: 10%;
 }
 
-@media all and (max-width: 500px){
+@media all and (max-width: 500px) {
   .user_main {
     padding-top: 35%;
   }
 }
-@media all and (max-width: 350px){
+@media all and (max-width: 350px) {
   .user_main {
     padding-top: 40%;
   }

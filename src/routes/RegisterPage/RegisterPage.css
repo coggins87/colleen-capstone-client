@@ -5,27 +5,26 @@
   padding-top: 9%;
 }
 
-.password_rule{
+.password_rule {
   font-size: xx-small;
   max-width: 50%;
   text-align: center;
   padding: 1% 20%;
   margin: inherit;
-
 }
-@media all and (max-width: 800px){
-  .RegisterPage{
-    padding-top: 15%
+@media all and (max-width: 800px) {
+  .RegisterPage {
+    padding-top: 15%;
   }
 }
-@media all and (max-width: 500px){
-  .RegisterPage{
-    padding-top: 30%
+@media all and (max-width: 500px) {
+  .RegisterPage {
+    padding-top: 30%;
   }
 }
 
-@media all and (max-width: 350px){
-  .RegisterPage{
-    padding-top: 36%
+@media all and (max-width: 350px) {
+  .RegisterPage {
+    padding-top: 36%;
   }
 }
