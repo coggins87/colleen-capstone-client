@@ -1,63 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RegisterForm component renders a RegisterForm by default 1`] = `
-<form
-  className="_form"
-  onSubmit={[Function]}
->
-  <div
-    role="alert"
-  />
-  <label
-    htmlFor="Registration_user_name"
+<Fragment>
+  <form
+    className="_form"
+    onSubmit={[Function]}
   >
-    User Name:
-  </label>
-  <input
-    className="form_input"
-    id="Registration_user_name"
-    name="user_name"
-    placeholder="Required"
-    required={true}
-    type="text"
-  />
-  <label
-    htmlFor="Registration_password"
-  >
-    Password:
-  </label>
+    <div
+      role="alert"
+    />
+    <label
+      htmlFor="Registration_user_name"
+    >
+      User Name:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_user_name"
+      name="user_name"
+      placeholder="Required"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="Registration_password"
+    >
+      Password:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_password"
+      name="password"
+      placeholder="Required"
+      required={true}
+      type="password"
+    />
+    <label
+      htmlFor="Registration_email"
+    >
+      Email:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_email"
+      name="email"
+      placeholder="Required"
+      required={true}
+      type="email"
+    />
+    <button
+      className="form_button"
+    >
+      Register
+    </button>
+  </form>
   <p
     className="password_rule"
   >
-    Must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
+    *Password must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
   </p>
-  <input
-    className="form_input"
-    id="Registration_password"
-    name="password"
-    placeholder="Required"
-    required={true}
-    type="password"
-  />
-  <label
-    htmlFor="Registration_email"
-  >
-    Email:
-  </label>
-  <input
-    className="form_input"
-    id="Registration_email"
-    name="email"
-    placeholder="Required"
-    required={true}
-    type="email"
-  />
-  <button
-    className="form_button"
-  >
-    Register
-  </button>
-</form>
+</Fragment>
 `;
 
 exports[`RegisterForm component renders the RegisterForm given context 1`] = `
@@ -82,61 +84,63 @@ exports[`RegisterForm component renders the RegisterForm given context 1`] = `
 `;
 
 exports[`RegisterForm component renders the RegisterForm given props 1`] = `
-<form
-  className="_form"
-  onSubmit={[Function]}
->
-  <div
-    role="alert"
-  />
-  <label
-    htmlFor="Registration_user_name"
+<Fragment>
+  <form
+    className="_form"
+    onSubmit={[Function]}
   >
-    User Name:
-  </label>
-  <input
-    className="form_input"
-    id="Registration_user_name"
-    name="user_name"
-    placeholder="Required"
-    required={true}
-    type="text"
-  />
-  <label
-    htmlFor="Registration_password"
-  >
-    Password:
-  </label>
+    <div
+      role="alert"
+    />
+    <label
+      htmlFor="Registration_user_name"
+    >
+      User Name:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_user_name"
+      name="user_name"
+      placeholder="Required"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="Registration_password"
+    >
+      Password:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_password"
+      name="password"
+      placeholder="Required"
+      required={true}
+      type="password"
+    />
+    <label
+      htmlFor="Registration_email"
+    >
+      Email:
+    </label>
+    <input
+      className="form_input"
+      id="Registration_email"
+      name="email"
+      placeholder="Required"
+      required={true}
+      type="email"
+    />
+    <button
+      className="form_button"
+    >
+      Register
+    </button>
+  </form>
   <p
     className="password_rule"
   >
-    Must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
+    *Password must be between 8 and 64 characters with at least 1 upper case, lower case, and special character
   </p>
-  <input
-    className="form_input"
-    id="Registration_password"
-    name="password"
-    placeholder="Required"
-    required={true}
-    type="password"
-  />
-  <label
-    htmlFor="Registration_email"
-  >
-    Email:
-  </label>
-  <input
-    className="form_input"
-    id="Registration_email"
-    name="email"
-    placeholder="Required"
-    required={true}
-    type="email"
-  />
-  <button
-    className="form_button"
-  >
-    Register
-  </button>
-</form>
+</Fragment>
 `;

@@ -11,6 +11,11 @@
   font-family: "Nanum Myeongjo", serif;
 
 }
+@media all and (min-width: 1000px){
+  .LoginPage{
+    padding-top: 12%
+  }
+}
 @media all and (max-width: 1000px){
   .LoginPage{
     padding-top: 12%
@@ -23,11 +28,12 @@
 }
 @media all and (max-width: 500px){
   .LoginPage{
-    padding-top: 28%
+    padding-top: 30%
   }
 }
 @media all and (max-width: 350px){
   .LoginPage{
-    padding-top: 35%
+    padding-top: 38%;
+    padding-bottom: 5%
   }
 }

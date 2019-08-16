@@ -3,15 +3,12 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  margin: auto;
+  margin: 20% auto;
 }
 
-@media all and (max-width: 800px){
-  .NotFoundPage {margin-top: 20%;}
-}
 
 @media all and (max-width: 600px){
-  .NotFoundPage {margin-top: 30%;}
+  .NotFoundPage {margin-top: 35%;}
 }
 
 @media all and (max-width: 400px){

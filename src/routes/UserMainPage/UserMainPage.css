@@ -1,28 +1,26 @@
 .user_main {
- 
   padding-top: 13%;
   padding-bottom: 15%;
   padding-left: 5%;
+  text-align: center;
 }
 
 .user_header {
   margin-bottom: 1%;
   color: rgb(0, 153, 255);
-  text-align: center;
 }
 
 .user_content {
   padding-bottom: 10%;
 }
 
-@media all and (max-width: 320px){
-  .user_main {
-    padding-top: 42%;
-  }
-}
-
 @media all and (max-width: 500px){
   .user_main {
     padding-top: 35%;
+  }
+}
+@media all and (max-width: 350px){
+  .user_main {
+    padding-top: 40%;
   }
 }

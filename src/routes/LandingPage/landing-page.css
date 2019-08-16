@@ -53,7 +53,20 @@ p {
   margin: 0px;
 }
 
-
+@media all and (min-width: 1300px) {
+  .Landing_page {
+   padding-top: 10%;
+  }
+  .heading_page {
+    height: 100%;
+    margin-top: -6%;
+  }
+  .app_desc,
+  .definition {
+    width: 80%;
+    justify-self: center;
+  }
+}
 @media all and (max-width: 1000px) {
   .Landing_page {
     padding-bottom: 8%;
@@ -69,6 +82,8 @@ p {
     justify-self: center;
   }
 }
+
+
 @media all and (max-width: 800px) {
   .Landing_page {
     margin-bottom: 2%;
