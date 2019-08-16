@@ -15,6 +15,7 @@ This app allows registered and non registered users to search for randomly gener
 
 ![Image of User Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/user-page-desktop.png)
 
+![Image of Logged In User Search/Save Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/result-desktop.png)
 
 ## Technology Used:
 
