@@ -7,13 +7,13 @@ This app allows registered and non registered users to search for randomly gener
 
 ## Screenshots:
 
-![Image of Landing Page](https://thinkful-ei-emu.github.com/amrap-client-colleen/images/landing-page-desktop.png)
+![Image of Landing Page](https://thinkful-ei-emu.github.com/colleen-capstone-client/images/landing-page-desktop.png)
 
-![Image of Login Page](https://thinkful-ei-emu.github.com/amrap-client-colleen/images/login-page-desktop.png)
+![Image of Login Page](https://thinkful-ei-emu.github.com/colleen-capstone-client/images/login-page-desktop.png)
 
-![Image of Search Page](https://thinkful-ei-emu.github.com/amrap-client-colleen/images/search-page-desktop.png)
+![Image of Search Page](https://thinkful-ei-emu.github.com/colleen-capstone-client/images/search-page-desktop.png)
 
-![Image of User Page](https://thinkful-ei-emu.github.com/amrap-client-colleen/images/user-page-desktop.png)
+![Image of User Page](https://thinkful-ei-emu.github.com/colleen-capstone-client/images/user-page-desktop.png)
 
 
 ## Technology Used:
