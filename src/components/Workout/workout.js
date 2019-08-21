@@ -6,7 +6,7 @@ export default class Workout extends React.Component {
   
   
   render() {
-    return ( <>
+    return ( <div className="workout">
       <ul>
         <h3 className="saved_workout_head">
           In {this.props.workout.workout_length} minutes:
@@ -20,8 +20,8 @@ export default class Workout extends React.Component {
           );
         })}
       </ul>
-      <button id="delete_button" onClick={()=>this.props.handleDelete(this.props.userId, this.props.workout.workout_id)}>Delete This Workout</button>
-      </>
+      <button className="delete_button" onClick={()=>this.props.handleDelete(this.props.userId, this.props.workout.workout_id)}>Delete Workout</button>
+      </div>
     );
   }
 }

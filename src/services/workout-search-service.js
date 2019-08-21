@@ -15,7 +15,6 @@ const WorkoutSearchService = {
     );
   },
   getUserWorkouts(userId) {
-    
     return fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
       headers: { authorization: `bearer ${TokenService.getAuthToken()}` }
     }).then(res =>

@@ -1,6 +1,6 @@
 .saved_workout_head {
   margin-bottom: 0;
-  color: rgb(0, 153, 255);
+  color: rgb(2, 69, 114);
 }
 
 .saved_workout_item {
@@ -8,14 +8,24 @@
   list-style-type: none;
 }
 
-#delete_button {
+.delete_button {
   padding: 2%;
   border-style: none;
+
 }
 
-#delete_button:hover {
-  padding: 2%;
+.delete_button:hover {
   border-style: none;
   color: white;
   background-color: rgb(207, 31, 8);
+}
+.user_workouts {
+  align-self:center;
+  max-width: 50%;
+
+}
+.workout {
+  padding: 1%;
+  text-align: left;
+
 }

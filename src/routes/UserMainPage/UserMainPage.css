@@ -7,11 +7,13 @@
 
 .user_header {
   margin-bottom: 1%;
-  color: rgb(0, 153, 255);
+  color: rgb(2, 69, 114);
 }
 
 .user_content {
   padding-bottom: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media all and (max-width: 500px) {
