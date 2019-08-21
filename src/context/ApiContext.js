@@ -1,6 +1,6 @@
 import React from "react";
 import TokenService from "../services/token-service";
-import WorkoutService from '../services/workout-search-service'
+import WorkoutService from "../services/workout-search-service";
 const ApiContext = React.createContext({
   error: null,
   isLoggedIn: false,
@@ -26,12 +26,14 @@ export class ApiProvider extends React.Component {
     this.setState({ error: null });
   };
 
-  onDelete=()=>
-  {
-    const user_id = this.props.reqs.params.userId
-    WorkoutService.deleteWorkout(user_id)
-    this.setState({workouts: WorkoutService.getUserWorkouts(user_id)})
-    
+  onDelete = () => {
+    const user_id = this.props.reqs.params.userId;
+    WorkoutService.deleteWorkout(user_id);
+    this.setState({ workouts: WorkoutService.getUserWorkouts(user_id) });
+  };
+
+  nullError = () => {
+    this.setState( {error: 'Invalid User'})
   }
 
   handleLoginSuccess = () => {
@@ -62,6 +64,7 @@ export class ApiProvider extends React.Component {
   render() {
     const value = {
       isUserLoggedIn: this.isUserLoggedIn,
+      nullError: this.nullError,
       error: this.state.error,
       isLoggedIn: this.state.isLoggedIn,
       setError: this.setError,

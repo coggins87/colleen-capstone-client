@@ -35,8 +35,9 @@ class UserMainPage extends React.Component {
     this.context.isUserLoggedIn();
     const userId = this.props.match.params.userId;
     if (userId === 'null'){
+      this.context.nullError()
       this.props.history.push('/');
-    }
+    } else {
     WorkoutSearchService.getUserWorkouts(userId)
       .then(res => {
         this.setState({
@@ -53,7 +54,8 @@ class UserMainPage extends React.Component {
           });
         }
         // this.props.history.push('/')
-      });
+      })
+    };
   }
   render() {
     const error = this.state.error;

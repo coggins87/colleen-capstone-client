@@ -111,3 +111,8 @@ p {
     min-height: 200px;
   }
 }
+
+.error_button {
+  border-style: none;
+  font-weight: bold;
+}
