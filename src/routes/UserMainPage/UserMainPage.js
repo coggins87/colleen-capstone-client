@@ -34,7 +34,9 @@ class UserMainPage extends React.Component {
   componentDidMount() {
     this.context.isUserLoggedIn();
     const userId = this.props.match.params.userId;
-
+    if (userId === 'null'){
+      this.props.history.push('/');
+    }
     WorkoutSearchService.getUserWorkouts(userId)
       .then(res => {
         this.setState({

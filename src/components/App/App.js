@@ -61,7 +61,7 @@ class App extends React.Component {
 
           <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route path="/search" component={ExerciseSearch} />
+            <Route path="/search" component={ExerciseSearch} />{" "}
             <PublicOnlyRoute path="/users/login" component={LoginPage} />
             <PublicOnlyRoute path="/register" component={RegisterPage} />
             <PrivateRoute path="/users/:userId" component={UserMainPage} />
