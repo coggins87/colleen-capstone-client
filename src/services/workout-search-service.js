@@ -15,11 +15,13 @@ const WorkoutSearchService = {
     );
   },
   getUserWorkouts(userId) {
+    
     return fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
       headers: { authorization: `bearer ${TokenService.getAuthToken()}` }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
+   
   },
   saveWorkout(userId, newWorkout) {
     return fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
@@ -32,6 +34,19 @@ const WorkoutSearchService = {
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
+  },
+  deleteWorkout(userId, workoutId) {
+    fetch(`${config.API_ENDPOINT}/workouts/${userId}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify(workoutId)
+    })
+      .catch(error => {
+        console.error({ error });
+      });
   }
 };
 

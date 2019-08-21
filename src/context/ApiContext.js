@@ -1,6 +1,6 @@
 import React from "react";
 import TokenService from "../services/token-service";
-
+import WorkoutService from '../services/workout-search-service'
 const ApiContext = React.createContext({
   error: null,
   isLoggedIn: false,
@@ -25,6 +25,14 @@ export class ApiProvider extends React.Component {
   clearError = () => {
     this.setState({ error: null });
   };
+
+  onDelete=()=>
+  {
+    const user_id = this.props.reqs.params.userId
+    WorkoutService.deleteWorkout(user_id)
+    this.setState({workouts: WorkoutService.getUserWorkouts(user_id)})
+    
+  }
 
   handleLoginSuccess = () => {
     const read = TokenService.readJwtToken();
@@ -60,7 +68,8 @@ export class ApiProvider extends React.Component {
       clearError: this.clearError,
       userId: this.state.userId,
       handleLoginSuccess: this.handleLoginSuccess,
-      handleLogoutSuccess: this.handleLogoutSuccess
+      handleLogoutSuccess: this.handleLogoutSuccess,
+      handleDeleteWorkout: this.onDelete
     };
     return (
       <ApiContext.Provider value={value}>

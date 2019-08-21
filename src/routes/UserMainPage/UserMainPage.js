@@ -1,17 +1,38 @@
 import React from "react";
 import WorkoutList from "../../components/WorkoutList/workout-list";
 import WorkoutSearchService from "../../services/workout-search-service";
+import ApiContext from "../../context/ApiContext";
 import "./UserMainPage.css";
 class UserMainPage extends React.Component {
-  state = {
-    workouts: [],
-    error: null
-  };
-  static defaultProps = {
-    match: { params: {} }
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      workouts: [],
+      error: null
+    };
+    props = {
+      match: { params: {} }
+    };
+    this.onDeleteWorkout = this.onDeleteWorkout.bind(this);
+  }
+
+  static contextType = ApiContext;
+
+  onDeleteWorkout(userId) {
+    WorkoutSearchService.getUserWorkouts(userId).then(res => {
+      this.setState({ workouts: res });
+    });
+  }
+
+  handleDeleteWorkout(userId, workoutId) {
+    const workoutToDelete = { workout_id: workoutId };
+
+    WorkoutSearchService.deleteWorkout(userId, workoutToDelete);
+    this.onDeleteWorkout(userId);
+  }
 
   componentDidMount() {
+    this.context.isUserLoggedIn();
     const userId = this.props.match.params.userId;
 
     WorkoutSearchService.getUserWorkouts(userId)
@@ -24,8 +45,12 @@ class UserMainPage extends React.Component {
         if (res.message) {
           this.setState({ error: "Something went wrong! Try again later." });
         } else {
-          this.setState({ error: res.error });
+          this.setState({
+            error:
+              "Sorry, could not find that user, please log out and try again"
+          });
         }
+        // this.props.history.push('/')
       });
   }
   render() {
@@ -41,7 +66,12 @@ class UserMainPage extends React.Component {
               later!
             </p>
           ) : (
-            <WorkoutList workouts={this.state.workouts} />
+            <WorkoutList
+              userId={this.props.match.params.userId}
+              workouts={this.state.workouts}
+              onDeleteWorkout={this.onDeleteWorkout}
+              handleDeleteWorkout={this.handleDeleteWorkout}
+            />
           )}
         </div>
       </div>
