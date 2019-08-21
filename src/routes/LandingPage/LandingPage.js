@@ -1,6 +1,8 @@
 import React from "react";
 import "./landing-page.css";
 import ApiContext from "../../context/ApiContext";
+import TokenService from "../../services/token-service";
+import IdleService from "../../services/idle-service";
 
 export default class LandingPage extends React.Component {
   state = {
@@ -12,6 +14,13 @@ export default class LandingPage extends React.Component {
     this.setState({
       error: null
     });
+    
+      TokenService.clearAuthToken();
+      TokenService.clearCallbackBeforeExpiry();
+      IdleService.unRegisterIdleResets();
+      this.context.handleLogoutSuccess();
+    
+
   };
   render() {
     const error = this.state.error;
@@ -32,7 +41,7 @@ export default class LandingPage extends React.Component {
               <p className="red">
                 {error}{" "}
                 <button className="error_button" onClick={this.handleClear}>
-                  x
+                  X
                 </button>
               </p>
             )}

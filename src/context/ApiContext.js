@@ -33,7 +33,7 @@ export class ApiProvider extends React.Component {
   };
 
   nullError = () => {
-    this.setState( {error: 'Invalid User'})
+    this.setState( {error: 'Invalid user, close this window to log out and try again'})
   }
 
   handleLoginSuccess = () => {
