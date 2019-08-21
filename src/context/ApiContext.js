@@ -33,12 +33,14 @@ export class ApiProvider extends React.Component {
   };
 
   nullError = () => {
-    this.setState( {error: 'Invalid user, close this window to log out and try again'})
+    const errorMessage = 'Invalid user, close this window to log out and try again'
+    this.setState( {error: errorMessage})
   }
 
   handleLoginSuccess = () => {
     const read = TokenService.readJwtToken();
     const user_Id = read.user_id;
+    this.clearError()
     this.setState({
       userId: user_Id,
       isLoggedIn: true

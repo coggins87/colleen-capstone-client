@@ -40,6 +40,7 @@ class UserMainPage extends React.Component {
     WorkoutSearchService.getUserWorkouts(userId)
       .then(res => {
         this.setState({
+          error: null,
           workouts: res
         });
       })
