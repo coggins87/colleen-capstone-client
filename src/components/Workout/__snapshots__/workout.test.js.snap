@@ -1,37 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Workout component renders the Workout given props 1`] = `
-<ul>
-  <h3
-    className="saved_workout_head"
+<div
+  className="workout"
+>
+  <ul>
+    <h3
+      className="saved_workout_head"
+    >
+      In 
+      1
+       minutes:
+    </h3>
+    <li
+      className="saved_workout_item"
+      key="1"
+    >
+       
+      name
+       
+    </li>
+    <li
+      className="saved_workout_item"
+      key="1"
+    >
+      reps
+       
+       
+    </li>
+    <li
+      className="saved_workout_item"
+      key="1"
+    >
+       
+       
+      with equip
+    </li>
+  </ul>
+  <button
+    className="delete_button"
+    onClick={[Function]}
   >
-    In 
-    1
-     minutes:
-  </h3>
-  <li
-    className="saved_workout_item"
-    key="1"
-  >
-     
-    name
-     
-  </li>
-  <li
-    className="saved_workout_item"
-    key="1"
-  >
-    reps
-     
-     
-  </li>
-  <li
-    className="saved_workout_item"
-    key="1"
-  >
-     
-     
-    with equip
-  </li>
-</ul>
+    Delete Workout
+  </button>
+</div>
 `;

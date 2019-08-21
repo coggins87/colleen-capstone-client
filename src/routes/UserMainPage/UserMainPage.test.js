@@ -8,10 +8,7 @@ describe("UserMainPage component", () => {
     match: { params: {} }
   };
 
-  it("renders the UserMainPage component by default", () => {
-    const wrapper = shallow(<UserMainPage />);
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
+ 
   it("renders the UserMainPage component given props", () => {
     const wrapper = shallow(<UserMainPage {...props} />);
     expect(toJson(wrapper)).toMatchSnapshot();

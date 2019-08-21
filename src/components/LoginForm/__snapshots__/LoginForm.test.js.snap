@@ -50,10 +50,12 @@ exports[`LoginForm component renders the LoginForm given context 1`] = `
     Object {
       "clearError": [Function],
       "error": null,
+      "handleDeleteWorkout": [Function],
       "handleLoginSuccess": [Function],
       "handleLogoutSuccess": [Function],
       "isLoggedIn": false,
       "isUserLoggedIn": [Function],
+      "nullError": [Function],
       "setError": [Function],
       "userId": null,
     }

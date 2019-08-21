@@ -7,24 +7,46 @@ exports[`WorkoutList component renders the Workout given props 1`] = `
   >
     Complete as many reps as possible:
   </h3>
-  <Workout
-    key="1"
-    workout={
-      Object {
-        "movements": Array [
-          Object {
-            "movement_name": "name",
-          },
-          Object {
-            "reps": "reps",
-          },
-          Object {
-            "equipment": "equip",
-          },
-        ],
-        "workout_length": 1,
+  <div
+    className="user_workouts"
+  >
+    <Workout
+      key="1"
+      workout={
+        Object {
+          "movements": Array [
+            Object {
+              "movement_name": "name",
+            },
+            Object {
+              "reps": "reps",
+            },
+            Object {
+              "equipment": "equip",
+            },
+          ],
+          "workout_length": 1,
+        }
       }
-    }
-  />
+      workouts={
+        Array [
+          Object {
+            "movements": Array [
+              Object {
+                "movement_name": "name",
+              },
+              Object {
+                "reps": "reps",
+              },
+              Object {
+                "equipment": "equip",
+              },
+            ],
+            "workout_length": 1,
+          },
+        ]
+      }
+    />
+  </div>
 </Fragment>
 `;

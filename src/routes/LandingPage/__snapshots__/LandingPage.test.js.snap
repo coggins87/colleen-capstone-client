@@ -21,6 +21,9 @@ exports[`LandingPage component renders the LandingPage component by default 1`] 
   <ul
     className="app_desc"
   >
+    <div
+      role="alert"
+    />
     <li>
       Click 'Generate A Workout' to search for a new AMRAP workout
     </li>
