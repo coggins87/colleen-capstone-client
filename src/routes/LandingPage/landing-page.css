@@ -4,7 +4,7 @@
   align-content: space-around;
   text-align: center;
   padding-top: 11%;
-  padding-bottom: 6%;
+
 }
 
 .heading_page {
@@ -12,8 +12,9 @@
   flex-direction: inherit;
   align-content: flex-end;
   margin-top: -5%;
-  background-image: url(../../media/background-landing=page.jpg);
+  background-image: url(../../media/startingline.jpg);
   background-size: cover;
+  
   color: white;
   padding: 8%;
 }
@@ -41,7 +42,6 @@ li {
   max-width: 500px;
   text-align: left;
   margin: 0 auto;
-  border: dashed 2px rgb(191, 196, 201);
   padding: 2%;
 }
 .def_word {

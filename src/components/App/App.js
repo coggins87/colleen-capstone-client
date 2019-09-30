@@ -67,10 +67,11 @@ class App extends React.Component {
             <PrivateRoute path="/users/:userId" component={UserMainPage} />
             <Route component={NotFoundPage} />
           </Switch>
-        </main>
-        <footer>
+          <footer>
           <Footer />
         </footer>
+        </main>
+       
       </div>
     );
   }

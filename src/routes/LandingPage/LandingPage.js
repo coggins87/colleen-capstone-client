@@ -34,8 +34,7 @@ export default class LandingPage extends React.Component {
             From a database of movements curated by a licensed physical
             therapist
           </h4>
-        </div>
-        <ul className="app_desc">
+          <ul className="app_desc">
           <div role="alert">
             {error && (
               <p className="red">
@@ -51,18 +50,20 @@ export default class LandingPage extends React.Component {
           <li>Create an account or log in to save workouts for later!</li>
         </ul>
         <div className="definition">
-          <p className="def_word">AMRAP[amrap]:</p>
+          <p className="def_word">AMRAP:</p>
           <p>
             {" "}
             noun
             <br />
             1. An abbreviation that means 'as many reps as possible'
             <br />
-            2. To complete a circuit of exercises as many times as possible
+            2. A workout with a goal to complete a circuit of exercises as many times as possible
             within a specific period of time
           </p>
         </div>
       </div>
+        </div>
+       
     );
   }
 }
