@@ -12,15 +12,16 @@
   flex-direction: inherit;
   align-content: flex-end;
   margin-top: -5%;
-  background-image: url(../../media/startingline.jpg);
-  background-size: cover;
-  
   color: white;
-  padding: 8%;
+  background-color: rgb(20, 5, 9);
+  padding-top: 8%;
 }
-
+#landing-img{
+  height:auto;
+  width:100vw;
+}
 .landing_title {
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Monda", sans-serif;
 }
 .subheader {
   list-style-type: none;
@@ -66,9 +67,7 @@ p {
   }
 }
 @media all and (max-width: 1000px) {
-  .Landing_page {
-    padding-bottom: 8%;
-  }
+  
   .heading_page {
     background-size: cover;
     min-height: 200px;
@@ -81,9 +80,7 @@ p {
 }
 
 @media all and (max-width: 800px) {
-  .Landing_page {
-    margin-bottom: 2%;
-  }
+ 
   .heading_page {
     background-size: cover;
     min-height: 200px;
@@ -93,7 +90,6 @@ p {
 
 @media all and (max-width: 509px) {
   .Landing_page {
-    margin-bottom: 5%;
     margin-top: 22%;
   }
   .heading_page {
@@ -103,7 +99,6 @@ p {
 }
 @media all and (max-width: 350px) {
   .Landing_page {
-    margin-bottom: 5%;
     margin-top: 35%;
   }
   .heading_page {

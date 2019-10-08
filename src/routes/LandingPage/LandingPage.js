@@ -3,7 +3,7 @@ import "./landing-page.css";
 import ApiContext from "../../context/ApiContext";
 import TokenService from "../../services/token-service";
 import IdleService from "../../services/idle-service";
-
+import track from '../../media/startingline.jpg'
 export default class LandingPage extends React.Component {
   state = {
     error: this.context.error
@@ -62,6 +62,7 @@ export default class LandingPage extends React.Component {
           </p>
         </div>
       </div>
+      <img id="landing-img" src={track} alt="women in workout clothes in a starting position"/>
         </div>
        
     );

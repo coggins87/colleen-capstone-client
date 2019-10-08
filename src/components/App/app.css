@@ -1,14 +1,13 @@
 .App {
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(17, 0, 4);
 }
 .App_main {
   display: flex;
   margin: 0 auto;
-  color: rgb(59, 56, 56);
+  color: white;
   align-content: center;
   flex-direction: column;
-  font-family: "Lexend Exa", sans-serif;
-  background-color: rgb(236, 236, 236);
+  font-family: "Archivo", sans-serif;
 }
 
 footer {

@@ -9,7 +9,7 @@
 
 .page_header {
   text-align: center;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Monda", sans-serif;
 }
 @media all and (min-width: 1000px) {
   .LoginPage {
