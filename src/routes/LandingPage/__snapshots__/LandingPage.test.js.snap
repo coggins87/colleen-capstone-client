@@ -17,36 +17,41 @@ exports[`LandingPage component renders the LandingPage component by default 1`] 
     >
       From a database of movements curated by a licensed physical therapist
     </h4>
-  </div>
-  <ul
-    className="app_desc"
-  >
-    <div
-      role="alert"
-    />
-    <li>
-      Click 'Generate A Workout' to search for a new AMRAP workout
-    </li>
-    <li>
-      Create an account or log in to save workouts for later!
-    </li>
-  </ul>
-  <div
-    className="definition"
-  >
-    <p
-      className="def_word"
+    <ul
+      className="app_desc"
     >
-      AMRAP[amrap]:
-    </p>
-    <p>
-       
-      noun
-      <br />
-      1. An abbreviation that means 'as many reps as possible'
-      <br />
-      2. To complete a circuit of exercises as many times as possible within a specific period of time
-    </p>
+      <div
+        role="alert"
+      />
+      <li>
+        Click 'Generate A Workout' to search for a new AMRAP workout
+      </li>
+      <li>
+        Create an account or log in to save workouts for later!
+      </li>
+    </ul>
+    <div
+      className="definition"
+    >
+      <p
+        className="def_word"
+      >
+        AMRAP:
+      </p>
+      <p>
+         
+        noun
+        <br />
+        1. An abbreviation that means 'as many reps as possible'
+        <br />
+        2. A workout with a goal to complete a circuit of exercises as many times as possible within a specific period of time
+      </p>
+    </div>
   </div>
+  <img
+    alt="women in workout clothes in a starting position"
+    id="landing-img"
+    src="startingline.jpg"
+  />
 </div>
 `;

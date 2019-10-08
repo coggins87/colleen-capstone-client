@@ -4,9 +4,23 @@
   align-content: space-around;
   text-align: center;
   padding-top: 11%;
+  background-color: rgb(20, 5, 9);
 
 }
-
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
 .heading_page {
   display: inherit;
   flex-direction: inherit;
@@ -15,6 +29,7 @@
   color: white;
   background-color: rgb(20, 5, 9);
   padding-top: 8%;
+  padding: 1%;
 }
 #landing-img{
   height:auto;
@@ -22,10 +37,15 @@
 }
 .landing_title {
   font-family: "Monda", sans-serif;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px #ff0000;
+
 }
 .subheader {
-  list-style-type: none;
-  padding: 0px;
+ padding: 0px;
+  margin: 0;
+  color: whitesmoke;
+  font-weight: 500
 }
 .app_desc {
   list-style-type: none;
@@ -38,21 +58,27 @@ ul {
 li {
   padding: 10px;
 }
-
+a {
+  color:white;
+}
+a:hover{
+  color:purple;
+}
 .definition {
   max-width: 500px;
   text-align: left;
   margin: 0 auto;
   padding: 2%;
 }
-.def_word {
-  font-weight: bold;
-}
+
 p {
   margin: 0px;
 }
 
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1001px) {
+  .landing_title {
+    font-size: 3em;
+  }
   .Landing_page {
     padding-top: 10%;
   }
@@ -67,7 +93,6 @@ p {
   }
 }
 @media all and (max-width: 1000px) {
-  
   .heading_page {
     background-size: cover;
     min-height: 200px;

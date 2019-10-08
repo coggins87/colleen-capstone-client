@@ -2,7 +2,13 @@ import React from "react";
 import "./footer.css";
 export default function Footer() {
   return (
-    <div className="footer">
+    <div>
+        <div className="definition">
+          <p className="def_word">AMRAP: workout style with a goal to complete a circuit of exercises as many times as possible
+            within a specific period of time
+          </p>
+        </div>
+        <div className="footer">
       <div className="instructions">
         <p>
           To log in as test user: <br />
@@ -27,6 +33,7 @@ export default function Footer() {
             My Portfolio
           </a>
         </p>
+      </div>
       </div>
     </div>
   );

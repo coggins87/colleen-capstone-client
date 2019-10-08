@@ -65,9 +65,7 @@ class Header extends React.Component {
               AMRApp
             </Link>
           </h1>
-          <div className="Header__tagline--wide">
-            <span>Find your next workout!</span>
-          </div>
+        
         </div>
         <div className="page-links">
           {TokenService.hasAuthToken()

@@ -4,6 +4,21 @@
   align-content: space-between;
   width: 100vw;
   font-size: 0.6em;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+footer {
+  bottom: 0%;
+  position:relative;
+  z-index: 1;
+  background-color: rgb(31, 30, 30);
+
+  width: 100%;
+}
+.definition{
+  color:white;
 }
 .instructions {
   display: inherit;

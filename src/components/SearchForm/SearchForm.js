@@ -11,6 +11,7 @@ class SearchForm extends React.Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
+      isHidden: true,
       error: null,
       time: 0,
       equipment: [
@@ -31,7 +32,12 @@ class SearchForm extends React.Component {
       time: e.target.value
     });
   };
-
+toggleFormView = e => {
+  e.preventDefault()
+  this.setState({
+    isHidden: !this.state.isHidden
+  })
+}
   updateEquipment = event => {
     let newEquipment = this.state.equipment;
     newEquipment.forEach(equipment => {
@@ -73,7 +79,7 @@ class SearchForm extends React.Component {
     this.setState({ error: null });
     WorkoutSearchService.submitSearch(time, equipmentString)
       .then(res => {
-        this.setState({ result: res });
+        this.setState({ result: res, isHidden: true });
       })
       .then(() => {
         window.scrollTo(0, this.myRef.current.offsetTop);
@@ -92,7 +98,8 @@ class SearchForm extends React.Component {
       <>
         <div className="search_form_inputs">
           <div role="alert">{error && <p className="red">{error}</p>}</div>
-          <form className="_form search_form " onSubmit={this.handleSubmit}>
+          <button id="toggle_form" onClick={e=>this.toggleFormView(e)}>{this.state.isHidden ? '+' : '-'}</button>
+         {!this.state.isHidden ? <form className="_form search_form " onSubmit={this.handleSubmit}>
             <label className="time_label" htmlFor="time">
               Select Workout Time 5-60 Minutes (required):{" "}
             </label>
@@ -124,7 +131,7 @@ class SearchForm extends React.Component {
               </fieldset>
             </div>
             <button className="form_button">Make My Workout</button>
-          </form>
+          </form> : <></>} 
         </div>
 
         {this.state.result.length > 0 ? (
