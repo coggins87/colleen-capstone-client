@@ -23,7 +23,7 @@ export default class Movement extends React.Component {
           className="toggle_video"
           onClick={e => this.handleToggleVideo(e)}
         >
-          {this.state.visible ? "Hide Video" : "Show Video"}
+          {this.state.visible ? "Hide" : "Video"}
         </button>
         </div>
         {this.state.visible && (

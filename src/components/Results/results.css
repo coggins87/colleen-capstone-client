@@ -15,5 +15,6 @@ video{
 @media screen and (min-width: 400px){
   video {
     width: 350px;
+    margin: 0 auto
   }
 }

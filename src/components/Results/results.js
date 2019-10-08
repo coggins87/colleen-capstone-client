@@ -20,7 +20,7 @@ class Result extends React.Component {
                 return (
                   <li key={uuid()}>
                     {movement.reps} {movement.movement_name}{" "}
-                    {movement.equipment ? `with ${movement.equipment}` : ""}
+                    {movement.equipment ? `with ${movement.equipment}` : ""}<br></br>
                     <video className="video" autoPlay loop><source src={movement.video} type="video/mp4"/></video>
                   </li>
                 );
