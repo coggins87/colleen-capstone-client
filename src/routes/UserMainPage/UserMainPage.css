@@ -1,8 +1,9 @@
 .user_main {
   padding-top: 13%;
-  padding-bottom: 15%;
   padding-left: 5%;
   text-align: center;
+  background-color: rgb(17, 0, 4);
+
 }
 
 .user_header {
@@ -24,5 +25,7 @@
 @media all and (max-width: 350px) {
   .user_main {
     padding-top: 40%;
+
+    margin-bottom: 5%;
   }
 }

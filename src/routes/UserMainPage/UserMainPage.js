@@ -53,7 +53,6 @@ class UserMainPage extends React.Component {
               "Sorry, could not find that user, please log out and try again"
           });
         }
-        // this.props.history.push('/')
       })
     };
   }

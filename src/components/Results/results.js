@@ -21,6 +21,7 @@ class Result extends React.Component {
                   <li key={uuid()}>
                     {movement.reps} {movement.movement_name}{" "}
                     {movement.equipment ? `with ${movement.equipment}` : ""}
+                    <video className="video" autoPlay loop><source src={movement.video} type="video/mp4"/></video>
                   </li>
                 );
               })

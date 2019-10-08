@@ -1,3 +1,21 @@
+.search_form_inputs{
+  display: flex;
+  flex-direction: column;
+}
+#toggle_form{
+  font-weight: 700;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 10%;
+  align-self: center;
+  margin-bottom: 10px;
+  background-color: white;
+}
+#toggle_form:hover{
+  border: 1px solid rgb(0, 183, 255);
+
+}
 .check_box_list {
   list-style-type: none;
   column-count: 2;

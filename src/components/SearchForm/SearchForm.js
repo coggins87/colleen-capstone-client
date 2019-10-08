@@ -6,12 +6,14 @@ import WorkoutSearchService from "../../services/workout-search-service";
 import TokenService from "../../services/token-service";
 import uuid from "uuid";
 import "./SearchForm.css";
+import 'animate.css'
+
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      isHidden: true,
+      isHidden: false,
       error: null,
       time: 0,
       equipment: [
@@ -79,6 +81,7 @@ toggleFormView = e => {
     this.setState({ error: null });
     WorkoutSearchService.submitSearch(time, equipmentString)
       .then(res => {
+        
         this.setState({ result: res, isHidden: true });
       })
       .then(() => {
@@ -99,7 +102,7 @@ toggleFormView = e => {
         <div className="search_form_inputs">
           <div role="alert">{error && <p className="red">{error}</p>}</div>
           <button id="toggle_form" onClick={e=>this.toggleFormView(e)}>{this.state.isHidden ? '+' : '-'}</button>
-         {!this.state.isHidden ? <form className="_form search_form " onSubmit={this.handleSubmit}>
+         {!this.state.isHidden ? <form className="_form search_form animated fadeIn" onSubmit={this.handleSubmit}>
             <label className="time_label" htmlFor="time">
               Select Workout Time 5-60 Minutes (required):{" "}
             </label>

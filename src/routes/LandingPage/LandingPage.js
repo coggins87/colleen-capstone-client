@@ -4,8 +4,8 @@ import ApiContext from "../../context/ApiContext";
 import TokenService from "../../services/token-service";
 import IdleService from "../../services/idle-service";
 import track from '../../media/startingline.jpg';
-import { CSSTransition } from 'react-transition-group';
 import {Link} from 'react-router-dom'
+import 'animate.css'
 
 export default class LandingPage extends React.Component {
   state = {
@@ -28,13 +28,12 @@ export default class LandingPage extends React.Component {
   render() {
     const error = this.state.error;
     return (
-      <CSSTransition in={true} timeout={150} classNames="my-node">
       <div className="Landing_page">
         <div className="heading_page">
           <h2 className="landing_title animated fadeIn">
             Create randomly generated AMRAP workouts
           </h2>
-          <h4 className="subheader">
+          <h4 className="subheader animated fadeIn delay-3s">
             From a database of movements curated by a licensed physical
             therapist
           </h4>
@@ -50,15 +49,14 @@ export default class LandingPage extends React.Component {
             )}
           </div>
 
-          <li>Click 'Generate A Workout' to search for a new AMRAP workout</li>
-          <li><Link to='/register'>Create an account</Link> or <Link to='/login'>log in</Link> to save workouts for later!</li>
+          <li className="animated fadeIn delay-4s">Click 'Generate A Workout' to search for a new AMRAP workout</li>
+          <li className="animated fadeIn delay-5s"><Link to='/register'>Create an account</Link> or <Link to='/login'>log in</Link> to save workouts for later!</li>
         </ul>
         
       </div>
       <img id="landing-img" src={track} alt="women in workout clothes in a starting position"/>
-    
+     
         </div>
-        </CSSTransition>
     );
   }
 }

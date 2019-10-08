@@ -11,14 +11,15 @@
 }
 footer {
   bottom: 0%;
-  position:relative;
+  position:fixed;
   z-index: 1;
   background-color: rgb(31, 30, 30);
 
   width: 100%;
 }
 .definition{
-  color:white;
+  color: rgb(236, 236, 236);
+  font-size: 0.6em;
 }
 .instructions {
   display: inherit;
