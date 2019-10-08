@@ -1,17 +1,20 @@
 .saved_workout_head {
   margin-bottom: 0;
-  color: rgb(2, 69, 114);
+  color: rgb(4, 127, 241);
 }
 
 .saved_workout_item {
   padding: 5px;
   list-style-type: none;
+  display: block; 
 }
 
 .delete_button {
   padding: 2%;
   border-style: none;
-
+  background-color: rgb(233, 230, 230);
+  color: rgb(207, 31, 8);
+  border-radius: 5px;
 }
 
 .delete_button:hover {
@@ -21,11 +24,19 @@
 }
 .user_workouts {
   align-self:center;
-  max-width: 50%;
 
 }
 .workout {
   padding: 1%;
   text-align: left;
+}
+.toggle_video{
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(241, 178, 4);
+}
 
+.movement_content{
+  display:flex;
+  justify-content: space-between;
 }
