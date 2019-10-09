@@ -16,18 +16,48 @@ exports[`results component renders the results given props 1`] = `
     >
        
        
+      <br />
+      <video
+        autoPlay={true}
+        className="video"
+        loop={true}
+      >
+        <source
+          type="video/mp4"
+        />
+      </video>
     </li>
     <li
       key="1"
     >
        
        
+      <br />
+      <video
+        autoPlay={true}
+        className="video"
+        loop={true}
+      >
+        <source
+          type="video/mp4"
+        />
+      </video>
     </li>
     <li
       key="1"
     >
        
        
+      <br />
+      <video
+        autoPlay={true}
+        className="video"
+        loop={true}
+      >
+        <source
+          type="video/mp4"
+        />
+      </video>
     </li>
   </ul>
 </div>

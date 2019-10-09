@@ -13,13 +13,6 @@ exports[`Header component renders a Header by default 1`] = `
         AMRApp
       </Link>
     </h1>
-    <div
-      className="Header__tagline--wide"
-    >
-      <span>
-        Find your next workout!
-      </span>
-    </div>
   </div>
   <div
     className="page-links"
@@ -93,13 +86,6 @@ exports[`Header component renders the Header given props 1`] = `
         AMRApp
       </Link>
     </h1>
-    <div
-      className="Header__tagline--wide"
-    >
-      <span>
-        Find your next workout!
-      </span>
-    </div>
   </div>
   <div
     className="page-links"

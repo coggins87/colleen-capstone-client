@@ -8,8 +8,14 @@ exports[`SearchForm component renders a SearchForm by default 1`] = `
     <div
       role="alert"
     />
+    <button
+      id="toggle_form"
+      onClick={[Function]}
+    >
+      -
+    </button>
     <form
-      className="_form search_form "
+      className="_form search_form animated fadeIn"
       onSubmit={[Function]}
     >
       <label
@@ -131,8 +137,14 @@ exports[`SearchForm component renders the SearchForm given props 1`] = `
     <div
       role="alert"
     />
+    <button
+      id="toggle_form"
+      onClick={[Function]}
+    >
+      -
+    </button>
     <form
-      className="_form search_form "
+      className="_form search_form animated fadeIn"
       onSubmit={[Function]}
     >
       <label
