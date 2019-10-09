@@ -2,7 +2,6 @@
   display: inherit;
   flex-direction: column;
   margin: auto;
-  padding-top: 9%;
 }
 
 .password_rule {
@@ -12,15 +11,7 @@
   padding: 1% 20%;
   margin: inherit;
 }
-@media all and (max-width: 800px) {
-  .RegisterPage {
-    padding-top: 15%;
-  }
-}
-@media all and (max-width: 500px) {
-  .RegisterPage {
-    padding-top: 30%;
-  }
+
 }
 
 @media all and (max-width: 350px) {
