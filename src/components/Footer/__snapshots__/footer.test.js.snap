@@ -1,44 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders a footer by default 1`] = `
-<div
-  className="footer"
->
+<div>
   <div
-    className="instructions"
+    className="definition"
   >
-    <p>
-      To log in as test user: 
-      <br />
-      Username: Test
-      <br />
-      Password: Test123!
+    <p
+      className="def_word"
+    >
+      AMRAP: workout style with a goal to complete a circuit of exercises as many times as possible within a specific period of time
     </p>
   </div>
   <div
-    className="external_links"
+    className="footer"
   >
-    <p>
-      <a
-        href="https://github.com/thinkful-ei-emu/colleen-capstone-client"
-      >
-        Project Code: Client
-      </a>
-    </p>
-    <p>
-      <a
-        href="https://github.com/thinkful-ei-emu/amrap-api-colleen"
-      >
-        Project Code: Server
-      </a>
-    </p>
-    <p>
-      <a
-        href="https://thinkful-ei-emu.github.io/portfolio-colleen/"
-      >
-        My Portfolio
-      </a>
-    </p>
+    <div
+      className="instructions"
+    >
+      <p>
+        To log in as test user: 
+        <br />
+        Username: Test
+        <br />
+        Password: Test123!
+      </p>
+    </div>
+    <div
+      className="external_links"
+    >
+      <p>
+        <a
+          href="https://github.com/thinkful-ei-emu/colleen-capstone-client"
+        >
+          Project Code: Client
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://github.com/thinkful-ei-emu/amrap-api-colleen"
+        >
+          Project Code: Server
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://thinkful-ei-emu.github.io/portfolio-colleen/"
+        >
+          My Portfolio
+        </a>
+      </p>
+    </div>
   </div>
 </div>
 `;

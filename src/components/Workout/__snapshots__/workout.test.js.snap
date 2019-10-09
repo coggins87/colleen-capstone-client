@@ -4,38 +4,38 @@ exports[`Workout component renders the Workout given props 1`] = `
 <div
   className="workout"
 >
+  <h3
+    className="saved_workout_head"
+  >
+    In 
+    1
+     minutes:
+  </h3>
   <ul>
-    <h3
-      className="saved_workout_head"
-    >
-      In 
-      1
-       minutes:
-    </h3>
-    <li
-      className="saved_workout_item"
-      key="1"
-    >
-       
-      name
-       
-    </li>
-    <li
-      className="saved_workout_item"
-      key="1"
-    >
-      reps
-       
-       
-    </li>
-    <li
-      className="saved_workout_item"
-      key="1"
-    >
-       
-       
-      with equip
-    </li>
+    <Movement
+      index={0}
+      movement={
+        Object {
+          "movement_name": "name",
+        }
+      }
+    />
+    <Movement
+      index={1}
+      movement={
+        Object {
+          "reps": "reps",
+        }
+      }
+    />
+    <Movement
+      index={2}
+      movement={
+        Object {
+          "equipment": "equip",
+        }
+      }
+    />
   </ul>
   <button
     className="delete_button"
