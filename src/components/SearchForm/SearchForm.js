@@ -62,7 +62,7 @@ toggleFormView = e => {
     let workoutToSave = { user_id, workout_length, movements };
     WorkoutSearchService.saveWorkout(user_id, workoutToSave)
       .then(() => {
-        this.setState({ result: [] });
+        this.setState({ isHidden: false, result: [] });
       })
       .catch(res => {
         this.setState({ error: res.error });
