@@ -18,7 +18,7 @@ video{
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
   .results{
     padding-bottom: 15px;
   }
