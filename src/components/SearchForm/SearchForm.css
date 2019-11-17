@@ -3,11 +3,9 @@
   flex-direction: column;
 }
 #toggle_form{
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 12px;
   border: 1px solid black;
-  border-radius: 5px;
-  width: 20px;
+  border-radius: 2px;
   align-self: center;
   margin-bottom: 10px;
   background-color: white;

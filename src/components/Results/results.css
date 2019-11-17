@@ -5,7 +5,6 @@
 .results {
   display: inherit;
   text-align: center;
-  margin-bottom: 15%;
 }
 video{
   width:250px;
@@ -16,5 +15,11 @@ video{
   video {
     width: 350px;
     margin: 0 auto
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .results{
+    padding-bottom: 15px;
   }
 }

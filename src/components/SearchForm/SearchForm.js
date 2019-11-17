@@ -101,7 +101,7 @@ toggleFormView = e => {
       <>
         <div className="search_form_inputs">
           <div role="alert">{error && <p className="red">{error}</p>}</div>
-          <button id="toggle_form" onClick={e=>this.toggleFormView(e)}>{this.state.isHidden ? '+' : '-'}</button>
+          <button id="toggle_form" onClick={e=>this.toggleFormView(e)}>{this.state.isHidden ? 'Show Form' : 'Hide Form'}</button>
          {!this.state.isHidden ? <form className="_form search_form animated fadeIn" onSubmit={this.handleSubmit}>
             <label className="time_label" htmlFor="time">
               Select Workout Time 5-60 Minutes (required):{" "}
