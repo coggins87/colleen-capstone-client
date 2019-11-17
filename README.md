@@ -1,27 +1,27 @@
 # AMRApp 
 
-Live App Link: https://amrap-client-colleen.colleenhiggins87.now.sh/
+Live App Link: https://amrapp.now.sh/
 
 ## Summary:
 This app allows registered and non registered users to search for randomly generated AMRAP workouts (As Many Repetitions As Possible) based on time and the user's available equipment. Registered users are able to login and save the random workouts they generated and display them on their 'My Workouts' page.
 
 ## Screenshots:
 
-![Image of Landing Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/landing-page-desktop.png)
+![Image of Landing Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/landing-page-mobile.png)
 
-![Image of Login Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/login-page-desktop.png)
+![Image of Login Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/login-page-mobile.png)
 
-![Image of Search Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/search-page-desktop.png)
+![Image of Search Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/search-page-mobile.png)
 
-![Image of User Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/user-page-desktop.png)
+![Image of User Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/user-page-mobile.png)
 
-![Image of Logged In User Search/Save Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/result-desktop.png)
+![Image of Logged In User Search/Save Page](https://github.com/thinkful-ei-emu/colleen-capstone-client/blob/master/images/result-mobile.png)
 
 ## Technology Used:
 
 Front-end: React, HTML, CSS, Javascript, testing with Enzyme
 
-Back-end: Node.js, Express, PostgreSQL, Knex, testing with Mocha
+Back-end: Node.js, Express, PostgreSQL, Knex, testing with Mocha/Chai
 
 
 Icons made by Freepik from "https://www.flaticon.com/"
