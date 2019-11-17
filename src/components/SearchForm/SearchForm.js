@@ -34,6 +34,12 @@ class SearchForm extends React.Component {
       time: e.target.value
     });
   };
+  clearResults = ()=>{
+    this.setState({
+      result: [],
+      isHidden: !this.state.isHidden
+    })
+  }
 toggleFormView = e => {
   e.preventDefault()
   this.setState({
@@ -143,6 +149,7 @@ toggleFormView = e => {
               result={this.state.result}
               time={this.state.time}
               saveWorkout={this.saveWorkout}
+              clearResults={this.clearResults}
             />
           </div>
         ) : null}

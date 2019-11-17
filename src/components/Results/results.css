@@ -1,10 +1,12 @@
 .results_list {
   list-style-type: none;
+  margin-bottom: 0px;
 }
 
 .results {
   display: inherit;
   text-align: center;
+  margin-bottom:20px;
 }
 video{
   width:250px;

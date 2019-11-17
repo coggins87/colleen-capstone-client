@@ -2,6 +2,7 @@ import React from "react";
 import TokenService from "../../services/token-service";
 import "./results.css";
 import uuid from "uuid";
+
 class Result extends React.Component {
   renderSaveButton = () => {
     return (
@@ -10,6 +11,8 @@ class Result extends React.Component {
       </button>
     );
   };
+
+
   render() {
     return (
       <div className="results">
@@ -27,6 +30,7 @@ class Result extends React.Component {
               })
             : ""}
         </ul>
+        {this.props.result.length > 0 && <button onClick={this.props.clearResults} className="form_button">Clear Results</button>}
         {TokenService.hasAuthToken() ? this.renderSaveButton() : ""}
       </div>
     );
