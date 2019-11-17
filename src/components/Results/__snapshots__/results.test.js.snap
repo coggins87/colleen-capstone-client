@@ -60,5 +60,10 @@ exports[`results component renders the results given props 1`] = `
       </video>
     </li>
   </ul>
+  <button
+    className="form_button"
+  >
+    Clear Results
+  </button>
 </div>
 `;

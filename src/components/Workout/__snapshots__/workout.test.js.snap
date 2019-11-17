@@ -14,6 +14,9 @@ exports[`Workout component renders the Workout given props 1`] = `
   <ul>
     <Movement
       index={0}
+      key="function mockConstructor() {
+        return fn.apply(this, arguments);
+      }"
       movement={
         Object {
           "movement_name": "name",
@@ -22,6 +25,9 @@ exports[`Workout component renders the Workout given props 1`] = `
     />
     <Movement
       index={1}
+      key="function mockConstructor() {
+        return fn.apply(this, arguments);
+      }"
       movement={
         Object {
           "reps": "reps",
@@ -30,6 +36,9 @@ exports[`Workout component renders the Workout given props 1`] = `
     />
     <Movement
       index={2}
+      key="function mockConstructor() {
+        return fn.apply(this, arguments);
+      }"
       movement={
         Object {
           "equipment": "equip",

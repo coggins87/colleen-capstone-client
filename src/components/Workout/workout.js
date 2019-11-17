@@ -15,7 +15,7 @@ export default class Workout extends React.Component {
           <ul>
           {this.props.workout.movements.map((movement, index) => {
             return (
-              <Movement movement={movement} index={index} />
+              <Movement key={uuid} movement={movement} index={index} />
             
             );
           })}
